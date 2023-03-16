@@ -19,12 +19,38 @@ class MyApp extends StatelessWidget {
               onPressed: (){
                 // TODO: sign out
               }, 
-              icon: Icon( FontAwesomeIcons.doorOpen ))
+              icon: const Icon( FontAwesomeIcons.doorOpen )),
           ]
         ),
-        body: const Center(
-          child: Text('Sign in - Google'),
-        ),
+        body: Container(
+          padding: EdgeInsets.all(10),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialButton(
+                  splashColor: Colors.transparent,
+                  minWidth: double.infinity,
+                  height: 60,
+                  color: Colors.red,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    
+                    children: [
+                      Icon( FontAwesomeIcons.google, color: Colors.white,),
+                      Padding(padding: EdgeInsets.all(8)),
+                      Text('Sign in with Google', style: TextStyle( color: Colors.white, fontSize: 17),)
+                    ],
+                  ),
+                  onPressed: (){
+                    // TODO: Sign in with Google
+
+                  }
+                  )
+              ],),),
+        )
+
       ),
     );
   }
