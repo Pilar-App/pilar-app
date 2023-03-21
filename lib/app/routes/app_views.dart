@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:pilar_app/app/routes/app_routes.dart';
+import 'package:pilar_app/app/ui/views/home/home_view.dart';
 import 'package:pilar_app/app/ui/views/onboarding/onboarding_1.dart';
 import 'package:pilar_app/app/ui/views/splash/splash_binding.dart';
 import 'package:pilar_app/app/ui/views/splash/splash_view.dart';
@@ -10,6 +11,10 @@ abstract class AppViews {
       name: AppRoutes.splash,
       page: () => const SplashView(),
       binding: SplashBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.home,
+      page: () => const HomeView(),
     ),
     GetPage(
       name: AppRoutes.onboarding1,
