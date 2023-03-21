@@ -12,7 +12,10 @@ class Toolbar extends StatelessWidget with PreferredSizeWidget {
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.person),
+          icon: const Icon(
+            Icons.person,
+            size: 32.0,
+          ),
           color: Colors.black,
           tooltip: 'Show Snackbar',
           onPressed: () {
@@ -21,7 +24,10 @@ class Toolbar extends StatelessWidget with PreferredSizeWidget {
           },
         ),
         IconButton(
-          icon: const Icon(Icons.bolt),
+          icon: const Icon(
+            Icons.bolt,
+            size: 32.0,
+          ),
           color: Colors.black,
           tooltip: 'Show Snackbar',
           onPressed: () {
