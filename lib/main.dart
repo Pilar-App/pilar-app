@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:pilar_app/app/routes/app_routes.dart';
+import 'package:pilar_app/app/routes/app_views.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,24 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
+    return GetMaterialApp(
+      title: 'Pilar App',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Login - Pilar'),
-          actions: [
-            IconButton(
-              onPressed: (){
-                // TODO: sign out
-              }, 
-              icon: Icon( FontAwesomeIcons.doorOpen ))
-          ]
-        ),
-        body: const Center(
-          child: Text('Sign in - Google'),
-        ),
-      ),
+      theme: ThemeData(fontFamily: 'Montserrat', primarySwatch: Colors.blue),
+      initialRoute: AppRoutes.splash,
+      getPages: AppViews.views,
     );
   }
 }
