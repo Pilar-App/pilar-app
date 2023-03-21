@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "132934703558",
+    "project_id": "pilarproject",
+    "storage_bucket": "pilarproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132934703558:android:8a7f46e9dcc094d1cdbac7",
+        "android_client_info": {
+          "package_name": "com.example.pilar_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132934703558-nrrimro21tsc7oo0rldc0s6q6hock9d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW8NkDEwFwj_iu1aHzOmNneWgIvoUI5Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132934703558-6v6gpm87s79qvos2cc4btc6q55e65p7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
