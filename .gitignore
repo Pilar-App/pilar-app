@@ -21,6 +21,9 @@ migrate_working_dir/
 # is commented out by default.
 #.vscode/
 
+./firebase_options.dart
+firebase_options.dart
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
