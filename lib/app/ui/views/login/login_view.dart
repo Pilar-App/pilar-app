@@ -6,8 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pilar_app/pre_cronotipo.dart';
-import 'firebase_options.dart';
-import 'login.dart';
+import './login_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Login extends StatefulWidget {
@@ -41,13 +40,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login - Pilar'), actions: [
-        IconButton(
-            onPressed: () {
-              // TODO: sign out
-            },
-            icon: const Icon(FontAwesomeIcons.doorOpen)),
-      ]),
+      appBar: AppBar(title: const Text('Login - Pilar')),
       body: Container(
         padding: EdgeInsets.all(10),
         child: Center(
