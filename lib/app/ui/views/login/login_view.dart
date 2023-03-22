@@ -35,13 +35,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login - Pilar'), actions: [
-        IconButton(
-            onPressed: () {
-              // TODO: sign out
-            },
-            icon: const Icon(FontAwesomeIcons.doorOpen)),
-      ]),
+      appBar: AppBar(title: const Text('Login - Pilar')),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: Center(
