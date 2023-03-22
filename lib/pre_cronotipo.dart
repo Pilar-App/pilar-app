@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class PreCronotipo extends StatelessWidget {
@@ -22,7 +20,7 @@ class PreCronotipo extends StatelessWidget {
             await logout();
             Navigator.pop(context);
           },
-          child: Text('Logout'),
+          child: const Text('Logout'),
         ),
       ])),
     );

@@ -1,14 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pilar_app/pre_cronotipo.dart';
-import 'firebase_options.dart';
-import 'login.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -49,7 +43,7 @@ class _LoginState extends State<Login> {
             icon: const Icon(FontAwesomeIcons.doorOpen)),
       ]),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +57,7 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(8)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         FontAwesomeIcons.google,
                         color: Colors.white,
@@ -78,8 +72,10 @@ class _LoginState extends State<Login> {
                   onPressed: () async {
                     await signInWithGoogle();
                     if (mounted) {
-                      Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => PreCronotipo()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const PreCronotipo()));
                     }
                   })
             ],
