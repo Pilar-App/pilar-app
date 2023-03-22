@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:pilar_app/pre_cronotipo.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_home.dart';
 import './login_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
                     await signInWithGoogle();
                     if (mounted) {
                       Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => PreCronotipo()));
+                          MaterialPageRoute(builder: (_) => QuizzHome()));
                     }
                   })
             ],
