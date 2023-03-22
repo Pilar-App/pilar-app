@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:pilar_app/pre_cronotipo.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_home.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -66,10 +66,8 @@ class _LoginState extends State<Login> {
                   onPressed: () async {
                     await signInWithGoogle();
                     if (mounted) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (_) => const PreCronotipo()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => const QuizzHome()));
                     }
                   })
             ],
