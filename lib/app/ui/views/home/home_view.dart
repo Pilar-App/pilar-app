@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilar_app/app/ui/components/bottom_navbar.dart';
 import 'package:pilar_app/app/ui/components/toolbar.dart';
 import 'package:pilar_app/app/ui/views/home/widgets/diary.dart';
 import 'package:pilar_app/app/ui/views/home/widgets/greeting.dart';
@@ -16,6 +17,7 @@ class HomeView extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: const [Greeting(), PlanToday(), Diary()],
       ),
+      bottomNavigationBar: const BottomNavbar(),
     );
   }
 }
