@@ -94,7 +94,7 @@ Widget btnSigInGoogle(BuildContext context) {
           ),
           Padding(padding: EdgeInsets.all(8)),
           Text(
-            'Sign in with Google',
+            'Sign in with Google Test',
             style: TextStyle(color: Colors.white, fontSize: 17),
           ),
         ],
