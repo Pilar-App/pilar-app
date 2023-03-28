@@ -1,36 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_home.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class QuizzHome extends StatelessWidget {
   const QuizzHome({super.key});
 
-  Future<void> logout() async {
-    final GoogleSignIn googleSignIn = GoogleSignIn();
-    await googleSignIn.signOut();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
-      body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, 
-            children: [
-              Container(
-                margin: const EdgeInsets.only(top: 30, bottom: 30),
-              ),
-              const Text('Quizz Cronotipo'),
-              ElevatedButton(
-                onPressed: () async {
-                  await logout();
-                  Navigator.pop(context);
-                },
-                child: Text('Logout'),
-              ),
-            ])),
+      body: titleSignIn(),
     );
   }
+}
+
+
+Widget titleSignIn() {
+  return Text(
+    'Quizz Cronotipo',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      color: Colors.white,
+      fontSize: 45,
+      fontWeight: FontWeight.bold,
+    ),
+  );
 }
