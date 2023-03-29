@@ -143,10 +143,10 @@ class _QuizzPageState extends State<QuizzPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: Color(0xFF258AD8),
       appBar: AppBar(
         title: Text(quiz.name),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Color(0xFF258AD8),
         elevation: 0,
       ),
       body: Column(
@@ -157,18 +157,20 @@ class _QuizzPageState extends State<QuizzPage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: LinearProgressIndicator(
-                color: Colors.amber.shade900,
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 value: progressIndex / totalQuestions,
                 minHeight: 20,
               ),
             ),
           ),
           ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 450),
+            constraints: const BoxConstraints(maxHeight: 950),
             child: Container(
+              height: 650,
               margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
               child: quiz.questions.isNotEmpty
                   ? Card(
+                      color: Color(0xFF33C9F2),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -178,22 +180,25 @@ class _QuizzPageState extends State<QuizzPage> {
                               quiz.questions[questionIndex].question,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
+                                color: Colors.white,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
                           Flexible(
+                            
                             child: ListView.builder(
+                              
                               shrinkWrap: true,
                               itemCount: totalOptions,
                               itemBuilder: (_, index) {
                                 return Container(
-                                  margin: const EdgeInsets.all(3),
+                                  
+                                  margin: const EdgeInsets.all(15),
                                   decoration: BoxDecoration(
                                     border: Border.all(
-                                        color: Colors.indigo.shade100,
+                                        color: Colors.white,
                                         width: 2),
                                     borderRadius: BorderRadius.circular(15),
                                   ),
@@ -204,14 +209,14 @@ class _QuizzPageState extends State<QuizzPage> {
                                       ),
                                     ),
                                     title: Text(
-                                        '1',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1),
+                                        quiz.questions[questionIndex].options[0][index]['content'],
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                      ),),
                                     onTap: () {
-                                      _optionSelected(quiz
-                                          .questions[questionIndex]
-                                          .options[index][0]['content']);
+                                      _optionSelected(quiz.questions[questionIndex].options[0][index]['content']);
                                     },
                                   ),
                                 );
