@@ -6,6 +6,7 @@ abstract class AppRoutes {
   static const login = "/login";
   static const home = "/home";
   static const quizzHome = "/quizzHome";
+  static const quizzPage = "/quizzPage";
   static const chat = "/chat";
   static const viaje = "/viaje";
 }

@@ -45,7 +45,7 @@ class QuizzHome extends StatelessWidget {
                   ),
                   OutlinedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/quiz-page');
+                      Navigator.pushNamed(context, '/quizzPage');
                     },
                     child: const Text('INICIAR TEST', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                     style: OutlinedButton.styleFrom(
@@ -60,7 +60,7 @@ class QuizzHome extends StatelessWidget {
                   ),
                   OutlinedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/info-cronotype-page');
+                      Navigator.pushNamed(context, '/quizzInfo');
                     },
                     child: const Text('¿POR QUÉ HAGO ESTO?', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                     style: OutlinedButton.styleFrom(
