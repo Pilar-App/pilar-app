@@ -1,0 +1,523 @@
+[
+    {
+        "number": 1,
+        "question": "Considerando solo tu propio ritmo en el que 'te sientes mejor', ¿a qué hora te levantarías si tuviera total libertad para planificar tu día?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"5:00 AM - 6:30 AM",
+                "points":5
+            },
+            {
+                "letter":"B",
+                "content":"6:30 AM - 7:45 AM",
+                "points":4
+            },
+            {
+                "letter":"C",
+                "content":"7:45 AM - 9:45 AM",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"9:45 AM - 11:00 AM",
+                "points":2
+            },
+            {
+                "letter":"E",
+                "content":"11:00 AM - MEDIODIA",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 2,
+        "question": "¿A qué hora te acostarías si tuvieras total libertad para planificar tu noche?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"8:00 PM - 9:00 AM",
+                "points":5
+            },
+            {
+                "letter":"B",
+                "content":"9:00 PM - 10:15 AM",
+                "points":4
+            },
+            {
+                "letter":"C",
+                "content":"10:15 PM - 12:30 AM",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"12:30 AM - 1:45 AM",
+                "points":2
+            },
+            {
+                "letter":"E",
+                "content":"1:45 AM - 3:00 AM",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 3,
+        "question": "Si tienes que levantarte a una hora específica en la mañana, ¿en qué medida dependes de que te despierte un despertador?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Para nada dependiente",
+                "points":4
+            },
+            {
+                "letter":"B",
+                "content":"Ligeramente dependiente",
+                "points":3
+            },
+            {
+                "letter":"C",
+                "content":"Regularmente dependiente",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"Muy dependiente",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 4,
+        "question": "¿Qué tan fácil te resulta levantarte por la mañana (cuando no te despiertan inesperadamente)?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Nada fácil",
+                "points":1
+            },
+            {
+                "letter":"B",
+                "content":"No muy fácil",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Bastante fácil",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Muy fácil",
+                "points":4
+            }
+        ]
+    },
+    {
+        "number": 5,
+        "question": "¿Qué tan alerta te sientes durante la primera media hora después de despertarse por la mañana?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"No del todo alerta",
+                "points":1
+            },
+            {
+                "letter":"B",
+                "content":"Ligeramente alerta",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Bastante alerta",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Muy alerta",
+                "points":4
+            }
+        ]
+    },
+    {
+        "number": 6,
+        "question": "¿Qué tanta hambre sientes durante la primera media hora después de despertarte por la mañana?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"No mucha",
+                "points":1
+            },
+            {
+                "letter":"B",
+                "content":"Regular",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Bastante",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Mucha",
+                "points":4
+            }
+        ]
+    },
+    {
+        "number": 7,
+        "question": "Durante la primera media hora después de despertarse por la mañana, ¿qué tan cansado te sientes?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Muy cansado",
+                "points":1
+            },
+            {
+                "letter":"B",
+                "content":"Ligeramente cansado",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Bastante fresco",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Muy fresco",
+                "points":4
+            }
+        ]
+    },
+    {
+        "number": 8,
+        "question": "Si no tienes compromisos al día siguiente, ¿a qué hora te acostarías en comparación con tu hora habitual de acostarte?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Pocas veces o nunca después",
+                "points":4
+            },
+            {
+                "letter":"B",
+                "content":"Menos de una hora después",
+                "points":3
+            },
+            {
+                "letter":"C",
+                "content":"1 - 2 horas más tarde",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"Más de dos horas después",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 9,
+        "question": "Has decidido hacer algo de ejercicio físico. Un amigo sugiere que hagas esto durante una hora dos veces por semana y el mejor momento para él es entre las 7:00 y las 8:00 a. m. Teniendo en cuenta solo tu propio “reloj” interno, ¿cómo crees que te iría?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Estaría en buena forma",
+                "points":4
+            },
+            {
+                "letter":"B",
+                "content":"Estaría en forma razonable",
+                "points":3
+            },
+            {
+                "letter":"C",
+                "content":"Lo encontraria dificil",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"Lo encontraria muy dificil",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 10,
+        "question": "Has decidido hacer algo de ejercicio físico. Un amigo sugiere que hagas esto durante una hora dos veces por semana y el mejor momento para él es entre las 7:00 y las 8:00 a. m. Teniendo en cuenta solo tu propio “reloj” interno, ¿cómo crees que te iría?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"8:00 PM - 9:00 AM",
+                "points":5
+            },
+            {
+                "letter":"B",
+                "content":"9:00 PM - 10:15 AM",
+                "points":4
+            },
+            {
+                "letter":"C",
+                "content":"10:15 PM - 12:45 AM",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"12:45 AM - 2:00 AM",
+                "points":2
+            },
+            {
+                "letter":"E",
+                "content":"2:00 AM - 3:00 AM",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 11,
+        "question": "Quieres estar en tu máximo rendimiento para una prueba que sabes va a ser mentalmente agotadora y que durará dos horas. Eres totalmente libre de planificar tu día. Teniendo en cuenta solo tu propio 'reloj' interno, ¿cuál de los cuatro tiempos de prueba elegirías?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"8:00 AM - 10:00 AM",
+                "points":6
+            },
+            {
+                "letter":"B",
+                "content":"11:00 AM - 1:00 PM",
+                "points":4
+            },
+            {
+                "letter":"C",
+                "content":"3:00 PM - 5:00 PM",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"7:00 PM - 9:00 PM",
+                "points":0
+            }
+        ]
+    },
+    {
+        "number": 12,
+        "question": "Si te metieras en la cama a las 11:00 PM, ¿qué tan cansad@ te sentirías?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"No del todo cansado",
+                "points":0
+            },
+            {
+                "letter":"B",
+                "content":"Un poco cansado",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Bastante cansado",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Muy cansado",
+                "points":5
+            }
+        ]
+    },
+    {
+        "number": 13,
+        "question": "Por alguna razón te has acostado varias horas más tarde de lo habitual, pero no hace falta que te levantes a ninguna hora en concreto a la mañana siguiente. ¿Qué es lo más probable qué hagas?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Te despertarás a la hora habitual y NO se dormirá",
+                "points":4
+            },
+            {
+                "letter":"B",
+                "content":"Te despertarás a la hora habitual y te adormeces a partir de entonces",
+                "points":3
+            },
+            {
+                "letter":"C",
+                "content":"Te despertarás a la hora habitual pero te vuelves a dormir",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"NO te despertarás hasta más tarde de lo habitual",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 14,
+        "question": "Una noche, debes permanecer despierto entre las 4:00 y las 6:00 a.m. para realizar una guardia nocturna. No tienes compromisos al día siguiente. ¿Cuál de las alternativas te conviene más?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"NO te acostarías hasta que terminara la guardia",
+                "points":1
+            },
+            {
+                "letter":"B",
+                "content":"Tomarías una siesta antes y después",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Dormiría bien antes y tomaría una siesta después",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Dormiría muchísimo antes de la guardia",
+                "points":4
+            }
+        ]
+    },
+    {
+        "number": 15,
+        "question": "Tienes que hacer dos horas de mucho trabajo físico. Eres totalmente libre de planificar tu día y considerando solo tu propio 'reloj' interno, ¿cuál de los siguientes horarios elegirías?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"8:00 AM - 10:00 AM",
+                "points":4
+            },
+            {
+                "letter":"B",
+                "content":"11:00 AM - 1:00 PM",
+                "points":3
+            },
+            {
+                "letter":"C",
+                "content":"3:00 PM - 5:00 PM",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"7:00 PM - 9:00 PM",
+                "points":1
+            }
+        ]
+    }
+    ,
+    {
+        "number": 16,
+        "question": "Has decidido realizar ejercicio físico intenso. Un amigo sugiere que hagas esto durante una hora dos veces por semana y el mejor momento para él es entre las 10:00 y las 11:00 p. m. Teniendo en cuenta nada más que tu propio 'reloj' interno, ¿qué tan bien crees que te desempeñarías?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Estaría en buena forma",
+                "points":1
+            },
+            {
+                "letter":"B",
+                "content":"Estaría en forma razonable",
+                "points":2
+            },
+            {
+                "letter":"C",
+                "content":"Lo encontraria dificil",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"Lo encontraria muy dificil",
+                "points":4
+            }
+        ]
+    }
+    ,
+    {
+        "number": 17,
+        "question": "Suponga que puedes elegir tu propio horario de trabajo. Imagina que trabajaste una jornada de CINCO horas (incluidos los descansos) y que tu trabajo fue interesante y pagado por resultados). ¿Qué CINCO HORAS CONSECUTIVAS seleccionarías?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"5 horas comenzando entre las 3:45 am y las 7:45 am",
+                "points":5
+            },
+            {
+                "letter":"B",
+                "content":"5 horas comenzando entre las 7:45 am y las 9:45 am",
+                "points":4
+            },
+            {
+                "letter":"C",
+                "content":"5 horas comenzando entre las 9:45 am y las 5:00 pm",
+                "points":3
+            },
+            {
+                "letter":"D",
+                "content":"5 horas comenzando entre las 5:00 pm y las 10:00 pm",
+                "points":2
+            },
+            {
+                "letter":"E",
+                "content":"5 horas comenzando entre las 10:00 pm y las 3:45 am",
+                "points":1
+            }
+        ]
+    },
+    {
+        "number": 18,
+        "question": "¿A qué hora del día crees que alcanzas tu pico de “sentirte mejor”?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"7:45 AM - 8:45 AM",
+                "points":4
+            },
+            {
+                "letter":"B",
+                "content":"8:45 AM - 4:45 PM",
+                "points":3
+            },
+            {
+                "letter":"C",
+                "content":"4:45 PM - 11:00 PM",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"11:00 PM - 4:45 AM",
+                "points":1
+            },
+            {
+                "letter":"E",
+                "content":"4:45 AM - 7:35 AM",
+                "points":5
+            }
+        ]
+    },
+    {
+        "number": 19,
+        "question": "Uno escucha acerca de los tipos de personas 'matutinas' y 'nocturnas'. ¿Con cuál de ellos te identificas?",
+        "answers":[
+            {
+                "letter":"A",
+                "content":"Definitivamente un tipo 'matutino'",
+                "points":6
+            },
+            {
+                "letter":"B",
+                "content":"Más bien un tipo de 'mañana' que de noche",
+                "points":4
+            },
+            {
+                "letter":"C",
+                "content":"Más bien un tipo de 'tarde' que de 'mañana'",
+                "points":2
+            },
+            {
+                "letter":"D",
+                "content":"Definitivamente un tipo 'nocturno'",
+                "points":0
+            }
+        ]
+    }
+]

@@ -14,19 +14,79 @@ class QuizzHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: titleSignIn(),
+      
+      backgroundColor: Theme.of(context).primaryColorDark,
+
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(
+                    height: 60,
+            ),
+            Container(
+              padding: EdgeInsets.all(15),
+              height: 100,
+              margin: const EdgeInsets.only(top: 30, bottom: 50),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/isotipo_blanco.png'),
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(15),
+              child: ListView(
+                shrinkWrap: true,
+                padding: const EdgeInsets.all(10),
+                children: [
+                  descriptionCronotype(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/quizzPage');
+                    },
+                    child: const Text('INICIAR TEST', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Color(0xFF33C9F2),
+                      elevation: 4,
+                      minimumSize: Size.fromHeight(60),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/quizzInfo');
+                    },
+                    child: const Text('¿POR QUÉ HAGO ESTO?', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Color(0xFF33C9F2),
+                      backgroundColor: Colors.white,
+                      elevation: 4,
+                      minimumSize: Size.fromHeight(60),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
 
-
-Widget titleSignIn() {
+Widget descriptionCronotype() {
   return Text(
-    'Quizz Cronotipo',
+    'Descubramos primero cuál es tu cronotipo, esto me servirá para entender mejor cómo puedo ayudar a optimizar tu tiempo',
     textAlign: TextAlign.center,
     style: TextStyle(
       color: Colors.white,
-      fontSize: 45,
+      fontSize: 20,
       fontWeight: FontWeight.bold,
     ),
   );
