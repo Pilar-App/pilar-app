@@ -87,7 +87,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
                     ],
                   ),
                   onTap: () {
-                    // Get.toNamed(AppRoutes.chat);
+                    Get.toNamed(AppRoutes.chat);
                   },
                 ),
                 GestureDetector(

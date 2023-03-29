@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:pilar_app/app/routes/app_routes.dart';
+import 'package:pilar_app/app/ui/views/bottom_navbar/navigation_view.dart';
+import 'package:pilar_app/app/ui/views/chat/chat_view.dart';
 import 'package:pilar_app/app/ui/views/home/home_view.dart';
 import 'package:pilar_app/app/ui/views/login/login_view.dart';
 import 'package:pilar_app/app/ui/views/onboarding/onboarding_1.dart';
@@ -15,10 +17,6 @@ abstract class AppViews {
       binding: SplashBinding(),
     ),
     GetPage(
-      name: AppRoutes.home,
-      page: () => const HomeView(),
-    ),
-    GetPage(
       name: AppRoutes.onboarding1,
       page: () => const Onboarding1(),
     ),
@@ -27,9 +25,20 @@ abstract class AppViews {
       page: () => const Login(),
     ),
     GetPage(
+      name: AppRoutes.navbar,
+      page: () => NavigationView(),
+    ),
+    GetPage(
+      name: AppRoutes.home,
+      page: () => const HomeView(),
+    ),
+    GetPage(
       name: AppRoutes.quizzHome,
       page: () => const QuizzHome(),
     ),
-
+    GetPage(
+      name: AppRoutes.chat,
+      page: () => const ChatView(),
+    ),
   ];
 }
