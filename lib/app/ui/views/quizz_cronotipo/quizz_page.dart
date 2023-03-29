@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/quiz.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/question.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_info.dart';
@@ -13,8 +14,9 @@ class QuizzPage extends StatefulWidget {
 }
 
 class _QuizzPageState extends State<QuizzPage> {
-  int totalQuestions = 19;
+  int totalQuestions = 10;
   late int totalOptions;
+  int posAnswer = 0;
   int questionIndex = 0;
   int progressIndex = 0;
   Quiz quiz = Quiz(name: 'CRONOTYPE TEST', questions: []);
@@ -35,7 +37,7 @@ class _QuizzPageState extends State<QuizzPage> {
       if (questionsAdded.contains(answer)) continue;
       questionsAdded.add(answer);
 
-      List<Map<String, dynamic>> answerOptions = [];
+      List<List<dynamic>> answerOptions = [];
       //[
       //  {
       //    "string": "asdasdasd"
@@ -43,16 +45,20 @@ class _QuizzPageState extends State<QuizzPage> {
       // },{
       // }
       //]
+      List<dynamic> ansTemp = data[answer]['answers'];
+      answerOptions.add(ansTemp);
 
-      for (var ans in optionList.sublist(0, totalOptions)) {
-        answerOptions.add(data[answer]['answers'][ans]);
-      }
+      // for (var ans in optionList.sublist(0, 3)) {
+      //   if (posAnswer == 3) break;
+      //   answerOptions.add(data[answer]['answers']);
+      //   posAnswer += 1;
+      // }
 
       Question question = Question.fromJson(data[answer]);
       question.addOptions(answerOptions);
       quiz.questions.add(question);
 
-      if (quiz.questions.length == totalQuestions) break;
+      if (quiz.questions.length >= totalQuestions) break;
     }
 
     setState(() {});
@@ -170,7 +176,12 @@ class _QuizzPageState extends State<QuizzPage> {
                             margin: const EdgeInsets.all(15),
                             child: Text(
                               quiz.questions[questionIndex].question,
-                              style: Theme.of(context).textTheme.headline1,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           Flexible(
@@ -193,16 +204,14 @@ class _QuizzPageState extends State<QuizzPage> {
                                       ),
                                     ),
                                     title: Text(
-                                        quiz.questions[questionIndex]
-                                            .options[index]['content'],
+                                        '1',
                                         style: Theme.of(context)
                                             .textTheme
-                                            .bodyText1
-                                    ),
+                                            .bodyText1),
                                     onTap: () {
                                       _optionSelected(quiz
                                           .questions[questionIndex]
-                                          .options[index]['content']);
+                                          .options[index][0]['content']);
                                     },
                                   ),
                                 );

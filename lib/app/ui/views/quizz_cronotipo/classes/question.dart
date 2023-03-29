@@ -2,8 +2,8 @@ class Question {
   late String question;
   // int score = 0;
   // late int points;
-  late Map<String, dynamic> answers;
-  List<Map<String, dynamic>> options = [];
+  late List<dynamic> answers;
+  List<List<dynamic>> options = [];
   String selected = 'Skipped';
   bool correct = false;
 
@@ -11,7 +11,7 @@ class Question {
       : question = json['question'],
         answers = json['answers'];
 
-  void addOptions(List<Map<String, dynamic>> newOptions) {
+  void addOptions(List<List<dynamic>> newOptions) {
     // score += points;
     options.add(answers);
     options.addAll(newOptions);
