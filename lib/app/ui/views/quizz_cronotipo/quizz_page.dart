@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/quiz.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/question.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/firestore_database.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_info.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/widgets/getImage.dart';
 
 class QuizzPage extends StatefulWidget {
   const QuizzPage({Key? key}) : super(key: key);
@@ -14,45 +16,36 @@ class QuizzPage extends StatefulWidget {
 }
 
 class _QuizzPageState extends State<QuizzPage> {
-  int totalQuestions = 10;
+  int totalQuestions = 18;
+  String cronotypeAnimal = '';
+  late String cronotypeAnimalFileName;
   late int totalOptions;
   int posAnswer = 0;
   int questionIndex = 0;
   int progressIndex = 0;
-  Quiz quiz = Quiz(name: 'CRONOTYPE TEST', questions: []);
+  Quiz quiz = Quiz(name: 'TEST CHRONOTYPE', questions: []);
 
   Future<void> readJson() async {
     final String response =
         await rootBundle.loadString('assets/JSON/cronotypeQA.json');
     final List<dynamic> data = await json.decode(response);
     List<int> optionList =
-        List<int>.generate(data.length, (i) => i); //[0,1,..., 18]
-    List<int> questionsAdded = []; //[3]
+        List<int>.generate(data.length, (i) => i); 
+    List<int> questionsAdded = []; 
 
     while (true) {
-      optionList.shuffle(); //[3,4,..., 9]
-      int answer = optionList[0]; // 3
-      List<dynamic> answerList = data[answer]['answers']; //[{...},{...},{...}]
-      totalOptions = answerList.length; // 4 o 5
+      optionList.shuffle(); 
+      int answer = optionList[0]; 
+      List<dynamic> answerList = data[answer]['answers'];
+      totalOptions = answerList.length;
+
       if (questionsAdded.contains(answer)) continue;
       questionsAdded.add(answer);
 
       List<List<dynamic>> answerOptions = [];
-      //[
-      //  {
-      //    "string": "asdasdasd"
-      //  },{
-      // },{
-      // }
-      //]
+
       List<dynamic> ansTemp = data[answer]['answers'];
       answerOptions.add(ansTemp);
-
-      // for (var ans in optionList.sublist(0, 3)) {
-      //   if (posAnswer == 3) break;
-      //   answerOptions.add(data[answer]['answers']);
-      //   posAnswer += 1;
-      // }
 
       Question question = Question.fromJson(data[answer]);
       question.addOptions(answerOptions);
@@ -64,23 +57,37 @@ class _QuizzPageState extends State<QuizzPage> {
     setState(() {});
   }
 
-//--------------
-
   @override
   void initState() {
     super.initState();
     readJson();
   }
 
-  void _optionSelected(String selected) {
+  void _optionSelected(Map<String, dynamic> selected) {
     quiz.questions[questionIndex].selected = selected;
-    // pensanding...
-    // if (selected == quiz.questions[questionIndex].answers) {
-    //   quiz.questions[questionIndex].correct = true;
-    //   quiz.right += 1;
-    // }
+
+    String letterSelected = quiz.questions[questionIndex].selected['letter'];
+    int pointsSelected = quiz.questions[questionIndex].selected['points'];
+
+    quiz.score += pointsSelected;
+
+    if (quiz.score >= 16 && quiz.score <= 30) {
+      cronotypeAnimal = 'WOLF';
+    }
+    if(quiz.score >= 42 && quiz.score <= 58){
+      cronotypeAnimal = 'BEAR';
+    }
+    if(quiz.score >= 70 && quiz.score <= 86){
+      cronotypeAnimal = 'LION';
+    }
+    if((quiz.score >= 31 && quiz.score <= 41) || (quiz.score >= 59 && quiz.score <= 69)){
+      cronotypeAnimal = 'DOLPHIN';
+    }
+
+    cronotypeAnimalFileName = '${cronotypeAnimal.toLowerCase()}_cronotipo_icono.png';
 
     progressIndex += 1;
+    
     if (questionIndex < totalQuestions - 1) {
       questionIndex += 1;
     } else {
@@ -95,28 +102,19 @@ class _QuizzPageState extends State<QuizzPage> {
 
   Widget _buildResultDialog(BuildContext context) {
     return AlertDialog(
-      title: Text('Resultados', style: Theme.of(context).textTheme.headline1),
-      backgroundColor: Theme.of(context).primaryColorDark,
+      backgroundColor: Colors.white,
       content: Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            'Preguntas totales: $totalQuestions',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-          Text(
-            'Correctas: ${quiz.right}',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-          Text(
-            'Incorrectas: ${(totalQuestions - quiz.right)}',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-          Text(
-            'Porcentaje: ${quiz.percent}%',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
+          getImageFromFirebaseStorage(cronotypeAnimalFileName),
+          Text('Your chronotype is a ${cronotypeAnimal}',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              )),
         ],
       ),
       actions: [
@@ -131,10 +129,8 @@ class _QuizzPageState extends State<QuizzPage> {
                       ))),
             );
           },
-          child: Text(
-            'Ver Respuestas',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
+          child: Text('Continue',
+              style: TextStyle(color: Color(0xFF258AD8), fontSize: 15, fontWeight: FontWeight.bold)),
         ),
       ],
     );
@@ -187,19 +183,15 @@ class _QuizzPageState extends State<QuizzPage> {
                             ),
                           ),
                           Flexible(
-                            
                             child: ListView.builder(
-                              
                               shrinkWrap: true,
                               itemCount: totalOptions,
                               itemBuilder: (_, index) {
                                 return Container(
-                                  
                                   margin: const EdgeInsets.all(15),
                                   decoration: BoxDecoration(
                                     border: Border.all(
-                                        color: Colors.white,
-                                        width: 2),
+                                        color: Colors.white, width: 2),
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: ListTile(
@@ -209,14 +201,18 @@ class _QuizzPageState extends State<QuizzPage> {
                                       ),
                                     ),
                                     title: Text(
-                                        quiz.questions[questionIndex].options[0][index]['content'],
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 15,
-                                      ),),
+                                      quiz.questions[questionIndex].options[0]
+                                          [index]['content'],
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                    ),
                                     onTap: () {
-                                      _optionSelected(quiz.questions[questionIndex].options[0][index]['content']);
+                                      _optionSelected(quiz
+                                          .questions[questionIndex]
+                                          .options[0][index]);
                                     },
                                   ),
                                 );
