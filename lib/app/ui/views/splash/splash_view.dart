@@ -28,14 +28,14 @@ class SplashView extends StatelessWidget {
                 child: Column(
                   children: const [
                     Text(
-                      "creado por",
+                      "created by",
                       style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.w400,
                           color: Colors.white),
                     ),
                     Text(
-                      "WARIQ",
+                      "PilarTeam",
                       style: TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.w700,
