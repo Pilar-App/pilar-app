@@ -38,6 +38,7 @@ dependencies:
   firebase_auth: ^4.3.0
   get: ^4.6.5
   accordion: ^2.5.1
+  firebase_storage: ^11.0.16
 
 dev_dependencies:
   flutter_test:
