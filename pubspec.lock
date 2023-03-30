@@ -25,6 +25,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.10.0"
+  back_button_interceptor:
+    dependency: transitive
+    description:
+      name: back_button_interceptor
+      sha256: e47660f2178a4392eb72001f9594d3fdcb5efde93e59d2819d61fda499e781c8
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -249,7 +257,7 @@ packages:
     source: hosted
     version: "4.0.2"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
@@ -272,6 +280,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  loader_overlay:
+    dependency: "direct main"
+    description:
+      name: loader_overlay
+      sha256: fba43a51a89b5578e3c05e39c9826a6853a1ab181b02e79cd41d96c58286716c
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   matcher:
     dependency: transitive
     description:
@@ -365,6 +381,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  syncfusion_flutter_charts:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_charts
+      sha256: "629e5db5dd144f52f46e4bd850c2e1d07408f3fd57dc10c5bcb6990df45d4a58"
+      url: "https://pub.dev"
+    source: hosted
+    version: "21.1.37"
+  syncfusion_flutter_core:
+    dependency: transitive
+    description:
+      name: syncfusion_flutter_core
+      sha256: f23067e46b781d488abf8e22e5608ca9972b49562e95f9e46cb6134e968f721b
+      url: "https://pub.dev"
+    source: hosted
+    version: "21.1.37"
+  syncfusion_flutter_gauges:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_gauges
+      sha256: "49e1a0be69b4a1a86435d8a80155b62a5dd107d16436e8d99d44238a08c60460"
+      url: "https://pub.dev"
+    source: hosted
+    version: "21.1.37"
   term_glyph:
     dependency: transitive
     description:
