@@ -42,6 +42,7 @@ dependencies:
   syncfusion_flutter_gauges: ^21.1.37
   intl: ^0.17.0
   loader_overlay: ^2.1.0
+  firebase_storage: ^11.0.16
 
 dev_dependencies:
   flutter_test:

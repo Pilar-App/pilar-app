@@ -1,10 +1,10 @@
 class Question {
+  
   late String question;
-  // int score = 0;
-  // late int points;
   late List<dynamic> answers;
+  late Map<String, dynamic> selected;
+
   List<List<dynamic>> options = [];
-  String selected = 'Skipped';
   bool correct = false;
 
   Question.fromJson(Map<String, dynamic> json)

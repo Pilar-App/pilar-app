@@ -74,7 +74,7 @@ class LoginView extends GetView<LoginController> {
 
 Widget titleSignIn() {
   return const Text(
-    'El momento para actuar es ahora',
+    'The time to act is now',
     textAlign: TextAlign.center,
     style: TextStyle(
       color: Colors.white,
@@ -86,7 +86,7 @@ Widget titleSignIn() {
 
 Widget descriptionSignIn() {
   return const Text(
-    'Tu camino está trazado frente de ti. Al haber empezado, ya diste el paso más dificil en tu camino a la superación personal. Te guiaremos a través de este camino.',
+    'Your path is laid out before you. Having started, you already took the most difficult step on your way to managing your energy. We will guide you through this path.',
     textAlign: TextAlign.center,
     style: TextStyle(
       color: Colors.white,

@@ -47,7 +47,7 @@ class QuizzHome extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/quizzPage');
                     },
-                    child: const Text('INICIAR TEST', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                    child: const Text('START TEST', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Colors.white,
                       backgroundColor: Color(0xFF33C9F2),
@@ -62,7 +62,7 @@ class QuizzHome extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/quizzInfo');
                     },
-                    child: const Text('¿POR QUÉ HAGO ESTO?', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                    child: const Text('WHY AM I DOING THIS?', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Color(0xFF33C9F2),
                       backgroundColor: Colors.white,
@@ -82,7 +82,7 @@ class QuizzHome extends StatelessWidget {
 
 Widget descriptionCronotype() {
   return Text(
-    'Descubramos primero cuál es tu cronotipo, esto me servirá para entender mejor cómo puedo ayudar a optimizar tu tiempo',
+    "Let's first find out what your chronotype is, this will help me to better understand how I can help optimize your time",
     textAlign: TextAlign.center,
     style: TextStyle(
       color: Colors.white,
