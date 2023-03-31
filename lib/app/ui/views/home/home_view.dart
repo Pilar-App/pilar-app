@@ -16,8 +16,7 @@ class HomeView extends GetView<NavigationController> {
         scrollDirection: Axis.vertical,
         children: [
           Greeting(
-            // name: controller.user.displayName!.split(" ")[0],
-            name: 'Jhomar',
+            name: controller.user.displayName!.split(" ")[0],
           ),
           const Energy(),
           const Schedule(),

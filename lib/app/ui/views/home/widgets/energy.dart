@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:pilar_app/app/routes/app_routes.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class Energy extends StatelessWidget {
@@ -12,7 +14,7 @@ class Energy extends StatelessWidget {
     final String dateFormatted = formatter.format(currentDate);
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -89,7 +91,7 @@ class Energy extends StatelessWidget {
                                       ],
                                     ),
                                     const Text(
-                                      "hours",
+                                      "points",
                                       style: TextStyle(
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.w500,
@@ -101,12 +103,13 @@ class Energy extends StatelessWidget {
                             ],
                             pointers: const <GaugePointer>[
                               RangePointer(
-                                value: 50,
-                                cornerStyle: CornerStyle.bothCurve,
+                                value: 80,
+                                cornerStyle: CornerStyle.bothFlat,
                                 enableAnimation: true,
                                 animationDuration: 1200,
                                 sizeUnit: GaugeSizeUnit.factor,
                                 color: Color.fromRGBO(37, 138, 216, 1.0),
+                                // color: Colors.red,
                                 width: 0.15,
                               ),
                             ],
@@ -244,7 +247,9 @@ class Energy extends StatelessWidget {
                 Column(
                   children: [
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.yourTasks);
+                      },
                       color: const Color.fromRGBO(37, 138, 216, 1.0),
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(16),

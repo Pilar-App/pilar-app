@@ -15,36 +15,54 @@ class _MessagesScreenState extends State<MessagesScreen> {
     return ListView.separated(
         itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             child: Row(
               mainAxisAlignment: widget.messages[index]['isUserMessage']
                   ? MainAxisAlignment.end
                   : MainAxisAlignment.start,
               children: [
                 Container(
-                    padding: EdgeInsets.symmetric(vertical: 14, horizontal: 14),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(
-                            20,
-                          ),
-                          topRight: Radius.circular(20),
-                          bottomRight: Radius.circular(
-                              widget.messages[index]['isUserMessage'] ? 0 : 20),
-                          topLeft: Radius.circular(
-                              widget.messages[index]['isUserMessage'] ? 20 : 0),
-                        ),
-                        color: widget.messages[index]['isUserMessage']
-                            ? Colors.grey.shade800
-                            : Colors.grey.shade900.withOpacity(0.8)),
-                    constraints: BoxConstraints(maxWidth: w * 2 / 3),
-                    child:
-                        Text(widget.messages[index]['message'].text.text[0])),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 14, horizontal: 14),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: const Radius.circular(
+                        20,
+                      ),
+                      topRight: const Radius.circular(20),
+                      bottomRight: Radius.circular(
+                          widget.messages[index]['isUserMessage'] ? 0 : 20),
+                      topLeft: Radius.circular(
+                          widget.messages[index]['isUserMessage'] ? 20 : 0),
+                    ),
+                    border: Border.all(
+                      color: widget.messages[index]['isUserMessage']
+                          ? const Color.fromRGBO(37, 138, 216, 1.0)
+                          : Colors.transparent,
+                    ),
+                    color: widget.messages[index]['isUserMessage']
+                        ? Colors.transparent
+                        : Colors.white,
+                  ),
+                  constraints: BoxConstraints(maxWidth: w * 2 / 3),
+                  child: Text(
+                    widget.messages[index]['message'].text.text[0],
+                    style: TextStyle(
+                      color: widget.messages[index]['isUserMessage']
+                          ? const Color.fromRGBO(37, 138, 216, 1.0)
+                          : Colors.black,
+                      fontWeight: widget.messages[index]['isUserMessage']
+                          ? FontWeight.w700
+                          : FontWeight.w500,
+                    ),
+                  ),
+                ),
               ],
             ),
           );
         },
-        separatorBuilder: (_, i) => Padding(padding: EdgeInsets.only(top: 10)),
+        separatorBuilder: (_, i) =>
+            const Padding(padding: EdgeInsets.only(top: 10)),
         itemCount: widget.messages.length);
   }
 }

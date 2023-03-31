@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:pilar_app/app/routes/app_routes.dart';
 import 'package:pilar_app/app/ui/views/bottom_navbar/navigation_binding.dart';
 import 'package:pilar_app/app/ui/views/bottom_navbar/navigation_view.dart';
+import 'package:pilar_app/app/ui/views/home/button_views/your_tasks.dart';
 import 'package:pilar_app/app/ui/views/login/login_binding.dart';
 import 'package:pilar_app/app/ui/views/login/login_view.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_binding.dart';
@@ -35,6 +36,10 @@ abstract class AppViews {
     GetPage(
       name: AppRoutes.quizzPage,
       page: () => const QuizzPage(),
+    ),
+    GetPage(
+      name: AppRoutes.yourTasks,
+      page: () => const YourTasks(),
     ),
   ];
 }
