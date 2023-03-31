@@ -1,73 +1,90 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_home.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_controller.dart';
 
-class QuizzHome extends StatelessWidget {
+class QuizzHome extends GetView<QuizzController> {
   const QuizzHome({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Theme.of(context).primaryColorDark,
-
-      body: Center(
+      body: Container(
+        padding: const EdgeInsets.only(
+          left: 16.0,
+          right: 16.0,
+          top: 60.0,
+        ),
         child: Column(
           children: [
-            SizedBox(
-                    height: 60,
-            ),
             Container(
-              padding: EdgeInsets.all(15),
-              height: 100,
+              padding: const EdgeInsets.all(15),
+              height: 120,
               margin: const EdgeInsets.only(top: 30, bottom: 50),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/isotipo_blanco.png'),
                 ),
               ),
             ),
+            Text(
+              "Excellent decision, ${controller.user.displayName!.split(" ")[0]}!",
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 36.0,
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
-              padding: EdgeInsets.all(15),
               child: ListView(
                 shrinkWrap: true,
                 padding: const EdgeInsets.all(10),
                 children: [
                   descriptionCronotype(),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   OutlinedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/quizzPage');
                     },
-                    child: const Text('START TEST', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: Color(0xFF33C9F2),
+                      backgroundColor: const Color(0xFF33C9F2),
                       elevation: 4,
-                      minimumSize: Size.fromHeight(60),
+                      minimumSize: const Size.fromHeight(60),
+                    ),
+                    child: const Text(
+                      'START TEST',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   OutlinedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/quizzInfo');
                     },
-                    child: const Text('WHY AM I DOING THIS?', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                     style: OutlinedButton.styleFrom(
-                      foregroundColor: Color(0xFF33C9F2),
+                      foregroundColor: const Color(0xFF33C9F2),
                       backgroundColor: Colors.white,
                       elevation: 4,
-                      minimumSize: Size.fromHeight(60),
+                      minimumSize: const Size.fromHeight(60),
+                    ),
+                    child: const Text(
+                      'WHY AM I DOING THIS?',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
@@ -81,7 +98,7 @@ class QuizzHome extends StatelessWidget {
 }
 
 Widget descriptionCronotype() {
-  return Text(
+  return const Text(
     "Let's first find out what your chronotype is, this will help me to better understand how I can help optimize your time",
     textAlign: TextAlign.center,
     style: TextStyle(

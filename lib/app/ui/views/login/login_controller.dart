@@ -31,7 +31,7 @@ class LoginController extends GetxController {
 
   void handleAuthStateChanged(isLoggedIn) {
     if (isLoggedIn) {
-      Get.offAllNamed(AppRoutes.navbar, arguments: firebaseAuth.currentUser);
+      Get.offAllNamed(AppRoutes.quizzHome, arguments: firebaseAuth.currentUser);
     }
   }
 
@@ -47,9 +47,7 @@ class LoginController extends GetxController {
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-    // Sign in the user with the credentials
-    final UserCredential userCredential =
-        await firebaseAuth.signInWithCredential(credential);
+    await firebaseAuth.signInWithCredential(credential);
     DialogLoading.cancelDialog();
   }
 }

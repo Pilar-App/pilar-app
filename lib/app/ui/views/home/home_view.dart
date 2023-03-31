@@ -17,6 +17,7 @@ class HomeView extends GetView<NavigationController> {
         children: [
           Greeting(
             name: controller.user.displayName!.split(" ")[0],
+            // name: controller.user,
           ),
           const Energy(),
           const Schedule(),

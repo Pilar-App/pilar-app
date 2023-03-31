@@ -12,8 +12,11 @@ class ProfileView extends GetView<NavigationController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ConstrainedBox(
-        constraints: const BoxConstraints.tightFor(width: 120),
+      body: Container(
+        padding: const EdgeInsets.symmetric(
+          vertical: 20.0,
+          horizontal: 16.0,
+        ),
         child: ElevatedButton(
           child: const Text(
             "Logout",

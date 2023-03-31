@@ -1,11 +1,12 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/quiz.dart';
+import 'package:get/get.dart';
+import 'package:pilar_app/app/routes/app_routes.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/question.dart';
-import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/firestore_database.dart';
-import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_info.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/quiz.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_controller.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/widgets/getImage.dart';
 
 class QuizzPage extends StatefulWidget {
@@ -29,13 +30,12 @@ class _QuizzPageState extends State<QuizzPage> {
     final String response =
         await rootBundle.loadString('assets/JSON/cronotypeQA.json');
     final List<dynamic> data = await json.decode(response);
-    List<int> optionList =
-        List<int>.generate(data.length, (i) => i); 
-    List<int> questionsAdded = []; 
+    List<int> optionList = List<int>.generate(data.length, (i) => i);
+    List<int> questionsAdded = [];
 
     while (true) {
-      optionList.shuffle(); 
-      int answer = optionList[0]; 
+      optionList.shuffle();
+      int answer = optionList[0];
       List<dynamic> answerList = data[answer]['answers'];
       totalOptions = answerList.length;
 
@@ -74,20 +74,22 @@ class _QuizzPageState extends State<QuizzPage> {
     if (quiz.score >= 16 && quiz.score <= 30) {
       cronotypeAnimal = 'WOLF';
     }
-    if(quiz.score >= 42 && quiz.score <= 58){
+    if (quiz.score >= 42 && quiz.score <= 58) {
       cronotypeAnimal = 'BEAR';
     }
-    if(quiz.score >= 70 && quiz.score <= 86){
+    if (quiz.score >= 70 && quiz.score <= 86) {
       cronotypeAnimal = 'LION';
     }
-    if((quiz.score >= 31 && quiz.score <= 41) || (quiz.score >= 59 && quiz.score <= 69)){
+    if ((quiz.score >= 31 && quiz.score <= 41) ||
+        (quiz.score >= 59 && quiz.score <= 69)) {
       cronotypeAnimal = 'DOLPHIN';
     }
 
-    cronotypeAnimalFileName = '${cronotypeAnimal.toLowerCase()}_cronotipo_icono.png';
+    cronotypeAnimalFileName =
+        '${cronotypeAnimal.toLowerCase()}_cronotipo_icono.png';
 
     progressIndex += 1;
-    
+
     if (questionIndex < totalQuestions - 1) {
       questionIndex += 1;
     } else {
@@ -101,48 +103,55 @@ class _QuizzPageState extends State<QuizzPage> {
   }
 
   Widget _buildResultDialog(BuildContext context) {
-    return AlertDialog(
-      backgroundColor: Colors.white,
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          getImageFromFirebaseStorage(cronotypeAnimalFileName),
-          Text('Your chronotype is a ${cronotypeAnimal}',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              )),
-        ],
-      ),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: ((context) => QuizzInfo(
-                        quiz: quiz,
-                      ))),
-            );
-          },
-          child: Text('Continue',
-              style: TextStyle(color: Color(0xFF258AD8), fontSize: 15, fontWeight: FontWeight.bold)),
+    return GetBuilder<QuizzController>(builder: (context) {
+      return AlertDialog(
+        backgroundColor: Colors.white,
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            getImageFromFirebaseStorage(cronotypeAnimalFileName),
+            Text('Your chronotype is a $cronotypeAnimal',
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                )),
+          ],
         ),
-      ],
-    );
+        actions: [
+          TextButton(
+            onPressed: () {
+              // Navigator.of(context).pop();
+              // Navigator.pushReplacement(
+              //   context,
+              //   MaterialPageRoute(builder: ((context) => NavigationView())),
+              // );
+              // todo: pasar el cronotipo resultado
+              Get.offNamed(AppRoutes.navbar, arguments: context.user);
+            },
+            child: const Text(
+              'Continue',
+              style: TextStyle(
+                color: Color(0xFF258AD8),
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
+      );
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF258AD8),
+      backgroundColor: const Color(0xFF258AD8),
       appBar: AppBar(
         title: Text(quiz.name),
-        backgroundColor: Color(0xFF258AD8),
+        backgroundColor: const Color(0xFF258AD8),
         elevation: 0,
       ),
       body: Column(
@@ -153,7 +162,7 @@ class _QuizzPageState extends State<QuizzPage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: LinearProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                 value: progressIndex / totalQuestions,
                 minHeight: 20,
               ),
@@ -166,7 +175,7 @@ class _QuizzPageState extends State<QuizzPage> {
               margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
               child: quiz.questions.isNotEmpty
                   ? Card(
-                      color: Color(0xFF33C9F2),
+                      color: const Color(0xFF33C9F2),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -175,7 +184,7 @@ class _QuizzPageState extends State<QuizzPage> {
                             child: Text(
                               quiz.questions[questionIndex].question,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -204,7 +213,7 @@ class _QuizzPageState extends State<QuizzPage> {
                                       quiz.questions[questionIndex].options[0]
                                           [index]['content'],
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 15,
                                       ),
