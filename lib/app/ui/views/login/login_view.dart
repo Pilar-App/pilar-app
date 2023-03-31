@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:pilar_app/app/routes/app_routes.dart';
 import 'package:pilar_app/app/ui/views/login/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -53,7 +52,7 @@ class LoginView extends GetView<LoginController> {
                     'Sign in with Google',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18.0,
+                      fontSize: 20.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -61,8 +60,6 @@ class LoginView extends GetView<LoginController> {
               ),
               onPressed: () async {
                 await controller.signInWithGoogle();
-                Get.offAllNamed(AppRoutes.navbar,
-                    arguments: controller.firebaseAuth.currentUser);
               },
             ),
           ],

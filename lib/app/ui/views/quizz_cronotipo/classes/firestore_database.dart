@@ -17,7 +17,7 @@ class FireStoreDataBase {
   Future<void> downloadURLExample(String fileName) async {
     downloadURL = await FirebaseStorage.instance
         .ref()
-        .child('images/${fileName}')
+        .child('images/$fileName')
         .getDownloadURL();
     debugPrint(downloadURL.toString());
   }
