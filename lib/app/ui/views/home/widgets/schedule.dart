@@ -38,7 +38,7 @@ class Schedule extends StatelessWidget {
                   positionImage: Alignment.bottomCenter,
                 ),
                 CardSchedule(
-                  title: "Good night",
+                  title: "Good evenning",
                   hour: "7:00 p.m",
                   image: "assets/images/bg_4.jpg",
                   positionImage: Alignment.bottomCenter,

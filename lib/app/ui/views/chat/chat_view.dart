@@ -1,28 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:dialog_flowtter/dialog_flowtter.dart';
+import 'package:flutter/material.dart';
 import 'package:pilar_app/app/ui/views/chat/classes/messages.dart';
 
-class ChatView extends StatelessWidget {
+class ChatView extends StatefulWidget {
   const ChatView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Pilar Bot',
-      theme: ThemeData(brightness: Brightness.dark),
-      home: Chat(),
-    );
-  }
+  _ChatViewState createState() => _ChatViewState();
 }
 
-class Chat extends StatefulWidget {
-  const Chat({Key? key}) : super(key: key);
-
-  @override
-  _ChatState createState() => _ChatState();
-}
-
-class _ChatState extends State<Chat> {
+class _ChatViewState extends State<ChatView> {
   late DialogFlowtter dialogFlowtter;
   final TextEditingController _controller = TextEditingController();
 
@@ -30,36 +17,43 @@ class _ChatState extends State<Chat> {
 
   @override
   void initState() {
-    DialogFlowtter.fromFile(path: 'assets/JSON/dialog_flow_auth.json').then((instance) => dialogFlowtter = instance);
+    DialogFlowtter.fromFile(path: 'assets/JSON/dialog_flow_auth.json')
+        .then((instance) => dialogFlowtter = instance);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Pilar'),
-      ),
       body: Container(
+        color: const Color.fromRGBO(209, 228, 255, 1.0),
         child: Column(
           children: [
             Expanded(child: MessagesScreen(messages: messages)),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              color: Colors.deepPurple,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 14,
+                vertical: 4,
+              ),
+              color: const Color.fromRGBO(37, 138, 216, 1.0),
               child: Row(
                 children: [
                   Expanded(
-                      child: TextField(
-                    controller: _controller,
-                    style: TextStyle(color: Colors.white),
-                  )),
+                    child: TextField(
+                      controller: _controller,
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                  ),
                   IconButton(
-                      onPressed: () {
-                        sendMessage(_controller.text);
-                        _controller.clear();
-                      },
-                      icon: Icon(Icons.send))
+                    onPressed: () {
+                      sendMessage(_controller.text);
+                      _controller.clear();
+                    },
+                    icon: const Icon(
+                      Icons.send,
+                      color: Colors.white,
+                    ),
+                  )
                 ],
               ),
             )
