@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:pilar_app/app/ui/components/bottom_navbar.dart';
-import 'package:pilar_app/app/ui/components/toolbar.dart';
-import 'package:pilar_app/app/ui/views/home/widgets/diary.dart';
+import 'package:get/get.dart';
+import 'package:pilar_app/app/ui/views/bottom_navbar/navigation_controller.dart';
+import 'package:pilar_app/app/ui/views/home/widgets/energy.dart';
 import 'package:pilar_app/app/ui/views/home/widgets/greeting.dart';
-import 'package:pilar_app/app/ui/views/home/widgets/plan_today.dart';
+import 'package:pilar_app/app/ui/views/home/widgets/schedule.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends GetView<NavigationController> {
   const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const Toolbar(),
       body: ListView(
         scrollDirection: Axis.vertical,
-        children: const [Greeting(), PlanToday(), Diary()],
+        children: [
+          Greeting(
+            name: controller.user.displayName!.split(" ")[0],
+          ),
+          const Energy(),
+          const Schedule(),
+        ],
       ),
-      bottomNavigationBar: const BottomNavbar(),
     );
   }
 }

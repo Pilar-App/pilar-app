@@ -21,8 +21,8 @@ migrate_working_dir/
 # is commented out by default.
 #.vscode/
 
-./firebase_options.dart
 firebase_options.dart
+dialog_flow_auth.json
 
 # Flutter/Dart/Pub related
 **/doc/api/
