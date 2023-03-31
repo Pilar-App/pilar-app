@@ -10,8 +10,8 @@ class NavigationController extends GetxController {
   // LoginController loginController = Get.find<LoginController>();
   QuizzController quizzController = Get.find<QuizzController>();
   // LoginController loginController = Get.put<LoginController>(LoginController());
-  late GoogleSignIn googleSignIn;
-  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  // late GoogleSignIn googleSignIn;
+  // FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   // late User user;
   late User user;
 
@@ -19,13 +19,12 @@ class NavigationController extends GetxController {
   void onInit() async {
     //
     // user = Get.arguments;
-    user = Get.arguments;
     super.onInit();
   }
 
   @override
   void onReady() {
-    googleSignIn = GoogleSignIn();
+    // googleSignIn = GoogleSignIn();
     super.onReady();
   }
 
@@ -38,8 +37,8 @@ class NavigationController extends GetxController {
 
   void logout() async {
     DialogLoading.showDialog();
-    await googleSignIn.disconnect();
-    await firebaseAuth.signOut();
+    // await googleSignIn.disconnect();
+    // await firebaseAuth.signOut();
     DialogLoading.cancelDialog();
     Get.offAllNamed(AppRoutes.splash);
   }
