@@ -75,14 +75,14 @@ class Energy extends StatelessWidget {
                                       mainAxisSize: MainAxisSize.min,
                                       children: const <Widget>[
                                         Text(
-                                          '5',
+                                          '21.0',
                                           style: TextStyle(
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                         ),
                                         Text(
-                                          ' / 10',
+                                          ' / 63.5',
                                           style: TextStyle(
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
@@ -103,7 +103,7 @@ class Energy extends StatelessWidget {
                             ],
                             pointers: const <GaugePointer>[
                               RangePointer(
-                                value: 80,
+                                value: 21 / 63.5 * 100,
                                 cornerStyle: CornerStyle.bothFlat,
                                 enableAnimation: true,
                                 animationDuration: 1200,
@@ -175,7 +175,7 @@ class Energy extends StatelessWidget {
                               height: 10.0,
                             ),
                             const Text(
-                              "Night",
+                              "Evenning",
                               style: TextStyle(
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.w500,

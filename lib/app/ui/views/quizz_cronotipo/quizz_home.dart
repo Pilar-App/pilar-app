@@ -39,56 +39,53 @@ class QuizzHome extends GetView<QuizzController> {
             const SizedBox(
               height: 20,
             ),
-            Container(
-              child: ListView(
-                shrinkWrap: true,
-                padding: const EdgeInsets.all(10),
-                children: [
-                  descriptionCronotype(),
-                  const SizedBox(
-                    height: 50,
+            ListView(
+              shrinkWrap: true,
+              children: [
+                descriptionCronotype(),
+                const SizedBox(
+                  height: 50,
+                ),
+                OutlinedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/quizzPage');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: const Color(0xFF33C9F2),
+                    elevation: 0,
+                    minimumSize: const Size.fromHeight(60),
                   ),
-                  OutlinedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/quizzPage');
-                    },
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: Colors.white,
-                      backgroundColor: const Color(0xFF33C9F2),
-                      elevation: 4,
-                      minimumSize: const Size.fromHeight(60),
-                    ),
-                    child: const Text(
-                      'START TEST',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  child: const Text(
+                    'START TEST',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                OutlinedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/quizzInfo');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: const Color(0xFF33C9F2),
+                    backgroundColor: Colors.white,
+                    elevation: 0,
+                    minimumSize: const Size.fromHeight(60),
                   ),
-                  OutlinedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/quizzInfo');
-                    },
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: const Color(0xFF33C9F2),
-                      backgroundColor: Colors.white,
-                      elevation: 4,
-                      minimumSize: const Size.fromHeight(60),
-                    ),
-                    child: const Text(
-                      'WHY AM I DOING THIS?',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  child: const Text(
+                    'WHY AM I DOING THIS?',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

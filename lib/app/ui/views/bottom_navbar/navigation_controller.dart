@@ -13,11 +13,13 @@ class NavigationController extends GetxController {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   // late User user;
   late User user;
+  late String chronotype;
 
   @override
   void onInit() async {
     //
-    user = Get.arguments;
+    user = Get.arguments["user"];
+    chronotype = Get.arguments["chronotype"];
     super.onInit();
   }
 

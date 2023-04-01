@@ -24,25 +24,28 @@ class SplashView extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: SizedBox(
-                height: 120.00,
-                child: Column(
-                  children: const [
-                    Text(
-                      "created by",
-                      style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white),
+              height: 120.00,
+              child: Column(
+                children: const [
+                  Text(
+                    "created by",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
                     ),
-                    Text(
-                      "PilarTeam",
-                      style: TextStyle(
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white),
-                    )
-                  ],
-                )),
+                  ),
+                  Text(
+                    "Pilar from  🇵🇪",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  )
+                ],
+              ),
+            ),
           )
         ]),
       ),

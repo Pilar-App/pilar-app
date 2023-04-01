@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -29,7 +30,7 @@ class LoginController extends GetxController {
   @override
   void onClose() {}
 
-  void handleAuthStateChanged(isLoggedIn) {
+  Future<void> handleAuthStateChanged(isLoggedIn) async {
     if (isLoggedIn) {
       Get.offAllNamed(AppRoutes.quizzHome, arguments: firebaseAuth.currentUser);
     }
@@ -48,6 +49,35 @@ class LoginController extends GetxController {
       idToken: googleAuth.idToken,
     );
     await firebaseAuth.signInWithCredential(credential);
+    final existDocument = await verifyUser(firebaseAuth.currentUser!);
+    if (!existDocument) {
+      final docUser = FirebaseFirestore.instance
+          .collection("users")
+          .doc(firebaseAuth.currentUser!.uid);
+
+      final json = {
+        "uid": firebaseAuth.currentUser!.uid,
+        "formChronotype": false,
+      };
+
+      await docUser.set(json);
+    }
     DialogLoading.cancelDialog();
+  }
+
+  Future<bool> verifyUser(User user) async {
+    AggregateQuerySnapshot docUser = await FirebaseFirestore.instance
+        .collection("users")
+        .where("uid", isEqualTo: user.uid)
+        .count()
+        .get();
+
+    final response = docUser.count;
+
+    if (response == 1) {
+      return true;
+    }
+
+    return false;
   }
 }

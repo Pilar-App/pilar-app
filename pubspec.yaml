@@ -44,6 +44,7 @@ dependencies:
   loader_overlay: ^2.1.0
   firebase_storage: ^11.0.16
   dialog_flowtter:
+  cloud_firestore: ^4.5.0
 
 dev_dependencies:
   flutter_test:

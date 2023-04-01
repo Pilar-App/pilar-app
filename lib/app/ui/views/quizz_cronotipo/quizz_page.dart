@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -18,8 +19,8 @@ class QuizzPage extends StatefulWidget {
 
 class _QuizzPageState extends State<QuizzPage> {
   int totalQuestions = 18;
-  String cronotypeAnimal = '';
-  late String cronotypeAnimalFileName;
+  String chronotypeAnimal = '';
+  late String chronotypeAnimalFileName;
   late int totalOptions;
   int posAnswer = 0;
   int questionIndex = 0;
@@ -57,6 +58,18 @@ class _QuizzPageState extends State<QuizzPage> {
     setState(() {});
   }
 
+  Future saveChronotype({
+    required String chronotypePar,
+    required String uid,
+  }) async {
+    final docUser = FirebaseFirestore.instance.collection("users").doc(uid);
+
+    await docUser.update({
+      'chronotype': chronotypePar,
+      'formChronotype': true,
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -72,21 +85,21 @@ class _QuizzPageState extends State<QuizzPage> {
     quiz.score += pointsSelected;
 
     if (quiz.score >= 16 && quiz.score <= 30) {
-      cronotypeAnimal = 'WOLF';
+      chronotypeAnimal = 'WOLF';
     }
     if (quiz.score >= 42 && quiz.score <= 58) {
-      cronotypeAnimal = 'BEAR';
+      chronotypeAnimal = 'BEAR';
     }
     if (quiz.score >= 70 && quiz.score <= 86) {
-      cronotypeAnimal = 'LION';
+      chronotypeAnimal = 'LION';
     }
     if ((quiz.score >= 31 && quiz.score <= 41) ||
         (quiz.score >= 59 && quiz.score <= 69)) {
-      cronotypeAnimal = 'DOLPHIN';
+      chronotypeAnimal = 'DOLPHIN';
     }
 
-    cronotypeAnimalFileName =
-        '${cronotypeAnimal.toLowerCase()}_cronotipo_icono.png';
+    chronotypeAnimalFileName =
+        '${chronotypeAnimal.toLowerCase()}_cronotipo_icono.png';
 
     progressIndex += 1;
 
@@ -94,9 +107,10 @@ class _QuizzPageState extends State<QuizzPage> {
       questionIndex += 1;
     } else {
       showDialog(
-          barrierDismissible: false,
-          context: context,
-          builder: (BuildContext context) => _buildResultDialog(context));
+        barrierDismissible: false,
+        context: context,
+        builder: (BuildContext context) => _buildResultDialog(context),
+      );
     }
 
     setState(() {});
@@ -111,25 +125,35 @@ class _QuizzPageState extends State<QuizzPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            getImageFromFirebaseStorage(cronotypeAnimalFileName),
-            Text('Your chronotype is a $cronotypeAnimal',
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                )),
+            getImageFromFirebaseStorage(chronotypeAnimalFileName),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Text(
+              'Your chronotype is a $chronotypeAnimal',
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
         actions: [
           TextButton(
             onPressed: () {
-              // Navigator.of(context).pop();
-              // Navigator.pushReplacement(
-              //   context,
-              //   MaterialPageRoute(builder: ((context) => NavigationView())),
-              // );
               // todo: pasar el cronotipo resultado
-              Get.offNamed(AppRoutes.navbar, arguments: context.user);
+              saveChronotype(
+                chronotypePar: chronotypeAnimal,
+                uid: context.user.uid,
+              );
+              Get.offNamed(
+                AppRoutes.navbar,
+                arguments: {
+                  "user": context.user,
+                  "chronotype": chronotypeAnimal,
+                },
+              );
             },
             child: const Text(
               'Continue',
@@ -155,7 +179,7 @@ class _QuizzPageState extends State<QuizzPage> {
         elevation: 0,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 30),
@@ -171,16 +195,19 @@ class _QuizzPageState extends State<QuizzPage> {
           ConstrainedBox(
             constraints: const BoxConstraints(maxHeight: 950),
             child: Container(
-              height: 650,
+              // height: 650,
               margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
               child: quiz.questions.isNotEmpty
                   ? Card(
-                      color: const Color(0xFF33C9F2),
+                      color: const Color(0xFF258AD8),
+                      elevation: 0.0,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
-                            margin: const EdgeInsets.all(15),
+                            margin: const EdgeInsets.only(
+                              bottom: 20.0,
+                            ),
                             child: Text(
                               quiz.questions[questionIndex].question,
                               textAlign: TextAlign.center,
