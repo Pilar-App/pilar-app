@@ -6,7 +6,7 @@
 ### SOLUTION IN ACTION
 We submit our solution in GDSC Solution challenge 2023 base on 17 Sustainable Development Goals of the United Nations. These are the [following](https://developers.google.com/community/gdsc-solution-challenge).
 
-Our explanation on [YouTube](https://www.youtube.com/watch?v=Kp13HX58oo4).
+Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
 [![Logo-2-Pilar.png](https://i.postimg.cc/jj2tJdJP/Logo-2-Pilar.png)](https://postimg.cc/qNP9Prwv)
 
