@@ -38,6 +38,13 @@ dependencies:
   firebase_auth: ^4.3.0
   get: ^4.6.5
   accordion: ^2.5.1
+  syncfusion_flutter_charts: ^21.1.37
+  syncfusion_flutter_gauges: ^21.1.37
+  intl: ^0.17.0
+  loader_overlay: ^2.1.0
+  firebase_storage: ^11.0.16
+  dialog_flowtter:
+  cloud_firestore: ^4.5.0
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +70,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-
+    - assets/JSON/
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

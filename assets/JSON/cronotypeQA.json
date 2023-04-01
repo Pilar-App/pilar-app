@@ -1,0 +1,521 @@
+[
+  {
+    "number": 1,
+    "question": "What time would you get up if you were entirely free to plan your day?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "5:00 AM - 6:30 AM",
+        "points": 5
+      },
+      {
+        "letter": "B",
+        "content": "6:30 AM - 7:45 AM",
+        "points": 4
+      },
+      {
+        "letter": "C",
+        "content": "7:45 AM - 9:45 AM",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "9:45 AM - 11:00 AM",
+        "points": 2
+      },
+      {
+        "letter": "E",
+        "content": "11:00 AM - 'NOON'",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "question": "What time would you go to bed if you were entirely free to plan your evening?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "8:00 PM - 9:00 AM",
+        "points": 5
+      },
+      {
+        "letter": "B",
+        "content": "9:00 PM - 10:15 AM",
+        "points": 4
+      },
+      {
+        "letter": "C",
+        "content": "10:15 PM - 12:30 AM",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "12:30 AM - 1:45 AM",
+        "points": 2
+      },
+      {
+        "letter": "E",
+        "content": "1:45 AM - 3:00 AM",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "question": " If there is a specific time at which you have to get up in the morning, to what extent do you depend on being woken up by an alarm clock?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Not at all dependent",
+        "points": 4
+      },
+      {
+        "letter": "B",
+        "content": "Slightly dependent",
+        "points": 3
+      },
+      {
+        "letter": "C",
+        "content": "Fairly dependent",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "Very dependent",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "question": "How easy do you find it to get up in the morning (when you are not woken up unexpectedly)?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Not at all easy",
+        "points": 1
+      },
+      {
+        "letter": "B",
+        "content": "Not very easy",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "Fairly easy",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "Very easy",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "question": "How alert do you feel during the first half-hour after you wake up in the morning?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Not at all alert",
+        "points": 1
+      },
+      {
+        "letter": "B",
+        "content": "Slightly alert",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "Fairly alert",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "Very alert",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "question": "How hungry do you feel during the first half-hour after you wake up in the morning?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Not at all hungry",
+        "points": 1
+      },
+      {
+        "letter": "B",
+        "content": "Slightly hungry",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "Fairly hungry",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "Very hungry",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "question": "During the first half-hour after you wake up in the morning, how tired do you feel?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Very tired",
+        "points": 1
+      },
+      {
+        "letter": "B",
+        "content": "Fairly tired",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "Fairly refreshed",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "Very refreshed",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "question": "If you have no commitments the next day, what time would you go to bed compared to your usual bedtime?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Seldom or never later",
+        "points": 4
+      },
+      {
+        "letter": "B",
+        "content": "Less than one hour later",
+        "points": 3
+      },
+      {
+        "letter": "C",
+        "content": "1-2 hours later",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "More than two hours later",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "question": "You have decided to engage in some physical exercise. A friend suggests that you do this for one hour twice a week and the best time for him is between 7:00 – 8:00 am. Bearing in mind nothing but your own internal “clock”, how do you think you would perform?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Would be in good form",
+        "points": 4
+      },
+      {
+        "letter": "B",
+        "content": "Would be in reasonable form",
+        "points": 3
+      },
+      {
+        "letter": "C",
+        "content": "Would find it difficult",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "Would find it very difficult",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "question": "At what time of day do you feel you become tired as a result of need for sleep?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "8:00 PM - 9:00 AM",
+        "points": 5
+      },
+      {
+        "letter": "B",
+        "content": "9:00 PM - 10:15 AM",
+        "points": 4
+      },
+      {
+        "letter": "C",
+        "content": "10:15 PM - 12:45 AM",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "12:45 AM - 2:00 AM",
+        "points": 2
+      },
+      {
+        "letter": "E",
+        "content": "2:00 AM - 3:00 AM",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "question": "You want to be at your peak performance for a test that you know is going to be mentally exhausting and will last for two hours. You are entirely free to plan your day. Considering only your own internal “clock”, which ONE of the four testing times would you choose?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "8:00 AM - 10:00 AM",
+        "points": 6
+      },
+      {
+        "letter": "B",
+        "content": "11:00 AM - 1:00 PM",
+        "points": 4
+      },
+      {
+        "letter": "C",
+        "content": "3:00 PM - 5:00 PM",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "7:00 PM - 9:00 PM",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "question": "If you got into bed at 11:00 PM, how tired would you be?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Not at all tired",
+        "points": 0
+      },
+      {
+        "letter": "B",
+        "content": "A little tired",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "Fairly tired",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "Very tired",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "question": "For some reason you have gone to bed several hours later than usual, but there is no need to get up at any particular time the next morning. Which ONE of the following are you most likely to do?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Will wake up at usual time, but will NOT fall back asleep",
+        "points": 4
+      },
+      {
+        "letter": "B",
+        "content": "Will wake up at usual time and will doze thereafter",
+        "points": 3
+      },
+      {
+        "letter": "C",
+        "content": "Will wake up at usual time but will fall asleep again",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "Will NOT wake up until later than usual",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "question": "One night you have to remain awake between 4:00 – 6:00 AM in order to carry out a night watch. You have no commitments the next day. Which ONE of the alternatives will suite you best?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Would NOT go to bed until watch was over",
+        "points": 1
+      },
+      {
+        "letter": "B",
+        "content": "Would take a nap before and sleep after",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "Would take a good sleep before and nap after",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "Would sleep only before watch",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "question": "You have to do two hours of hard physical work. You are entirely free to plan your day and considering only your own internal “clock” which ONE of the following time would you choose?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "8:00 AM - 10:00 AM",
+        "points": 4
+      },
+      {
+        "letter": "B",
+        "content": "11:00 AM - 1:00 PM",
+        "points": 3
+      },
+      {
+        "letter": "C",
+        "content": "3:00 PM - 5:00 PM",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "7:00 PM - 9:00 PM",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "question": "You have decided to engage in hard physical exercise. A friend suggests that you do this for one hour twice a week and the best time for him is between 10:00 – 11:00 PM. Bearing in mind nothing else but your own internal “clock” how well do you think you would perform?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "I would be in good shape",
+        "points": 1
+      },
+      {
+        "letter": "B",
+        "content": "I would be in reasonable shape",
+        "points": 2
+      },
+      {
+        "letter": "C",
+        "content": "I would find it hard",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "I would find it very difficult",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "question": "Suppose that you can choose your own work hours. Assume that you worked a FIVE hour day (including breaks) and that your job was interesting and paid by results). Which FIVE CONSECUTIVE HOURS would you select?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "5 hours starting between 3:45 am and 7:45 am",
+        "points": 5
+      },
+      {
+        "letter": "B",
+        "content": "5 hours starting between 7:45 am and 9:45 am",
+        "points": 4
+      },
+      {
+        "letter": "C",
+        "content": "5 hours starting between 9:45 am and 5:00 pm",
+        "points": 3
+      },
+      {
+        "letter": "D",
+        "content": "5 hours starting between 5:00 pm and 10:00 pm",
+        "points": 2
+      },
+      {
+        "letter": "E",
+        "content": "5 hours starting between 10:00 pm and 3:45 am",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "question": "At what time of the day do you think that you reach your “feeling best” peak?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "7:45 AM - 8:45 AM",
+        "points": 4
+      },
+      {
+        "letter": "B",
+        "content": "8:45 AM - 4:45 PM",
+        "points": 3
+      },
+      {
+        "letter": "C",
+        "content": "4:45 PM - 11:00 PM",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "11:00 PM - 4:45 AM",
+        "points": 1
+      },
+      {
+        "letter": "E",
+        "content": "4:45 AM - 7:35 AM",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "question": "One hears about “morning” and “evening” types of people. Which ONE of these types do you consider yourself to be?",
+    "answers": [
+      {
+        "letter": "A",
+        "content": "Definitely a 'morning' type",
+        "points": 6
+      },
+      {
+        "letter": "B",
+        "content": "More of a 'morning' than night type",
+        "points": 4
+      },
+      {
+        "letter": "C",
+        "content": "More of a 'afternoon' type than a 'morning' type",
+        "points": 2
+      },
+      {
+        "letter": "D",
+        "content": "Definitely a 'night' type",
+        "points": 0
+      }
+    ]
+  }
+]

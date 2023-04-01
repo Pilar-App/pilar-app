@@ -1,17 +1,19 @@
 import 'package:accordion/accordion.dart';
 import 'package:flutter/material.dart';
 
-class CardDiary extends StatelessWidget {
-  const CardDiary({
+class CardSchedule extends StatelessWidget {
+  const CardSchedule({
     Key? key,
     required this.title,
     required this.hour,
-    required this.background,
+    required this.image,
+    required this.positionImage,
   }) : super(key: key);
 
   final String title;
   final String hour;
-  final Color background;
+  final String image;
+  final AlignmentGeometry positionImage;
 
   @override
   Widget build(BuildContext context) {
@@ -41,16 +43,39 @@ class CardDiary extends StatelessWidget {
               paddingListHorizontal: 0.0,
               children: [
                 AccordionSection(
-                  headerBackgroundColor: background,
+                  headerBackgroundColor: Colors.transparent,
+                  rightIcon: const SizedBox.shrink(),
                   contentBorderColor: Colors.grey,
                   headerPadding: const EdgeInsets.symmetric(
-                      vertical: 30.0, horizontal: 25.0),
-                  header: Text(
-                    title,
-                    style: const TextStyle(
+                    vertical: 0.0,
+                    horizontal: 0.0,
+                  ),
+                  header: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0,
+                      vertical: 25.0,
+                    ),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(image),
+                        fit: BoxFit.cover,
+                        alignment: positionImage,
+                        colorFilter: ColorFilter.mode(
+                            Colors.black.withOpacity(0.2), BlendMode.darken),
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(10.0),
+                        topRight: Radius.circular(10.0),
+                      ),
+                    ),
+                    child: Text(
+                      title,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18.0,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                   content: Column(
                     children: [
