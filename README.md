@@ -4,7 +4,7 @@
 > University students have difficulties staying organized and productive in their studies, which affects their academic performance, especially their emotional health, generating stress and anxiety.
 
 ### SOLUTION IN ACTION
-We submit our solution in GDSC Solution challenge 2023 base on 17 Sustainable Development Goals of the United Nations. These are the [following](https://developers.google.com/community/gdsc-solution-challenge).
+We submit our solution for the GDSC Solution challenge 2023 based on the 17 Sustainable Development Goals of the United Nations. You can learn more about the goal [here](https://developers.google.com/community/gdsc-solution-challenge).
 
 Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
