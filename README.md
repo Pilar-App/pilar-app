@@ -20,7 +20,7 @@ Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
 ### Technology stack
 
-![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)
+[![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)](https://flutter.dev/)
 ![Firebase](https://img.shields.io/badge/-Firebase-red?style=for-the-badge&logo=Firebase)
 ![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
