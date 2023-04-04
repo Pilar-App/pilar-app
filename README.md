@@ -3,6 +3,16 @@
 
 > University students have difficulties staying organized and productive in their studies, which affects their academic performance, especially their emotional health, generating stress and anxiety.
 
+Jump to
+
+- [SOLUTION IN ACTION](#solution-in-action) 
+- [VISIt OUR PAST MVP](#visit-our-past-mvp) 
+- [TECHNOLOGY STACK](#technology-stack) 
+  - [Flutter](#flutter) 
+  - [Terminal](#terminal) 
+- [PROJECT BRANCHES](#project-branches) 
+
+
 ### SOLUTION IN ACTION
 We submit our solution for the GDSC Solution challenge 2023 based on the 17 Sustainable Development Goals of the United Nations. You can learn more about the goal [here](https://developers.google.com/community/gdsc-solution-challenge).
 
@@ -12,22 +22,49 @@ Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
 ---
 
-### Visit our past MVP project
+### VISIt OUR PAST MVP
 
 [MVP-Pilar-Project/action-mvp](https://github.com/Pilar-App/MVP-Pilar-Project/tree/master/action-mvp)
 
 ---
 
-### Technology stack
+### TECHNOLOGY STACK
 
+## Flutter
 [![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)](https://flutter.dev/)
+![Dart](https://img.shields.io/static/v1?style=for-the-badge&message=Dart&color=0175C2&logo=Dart&logoColor=FFFFFF&label=)
+
+WHY did you use it?
+
+## Firebase
 ![Firebase](https://img.shields.io/badge/-Firebase-red?style=for-the-badge&logo=Firebase)
+
+WHY did you use it?
+
+
+## Google Cloud Platform
 ![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)
+
+WHY did you use it?
+
+
+## Dialogflow
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
+![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
+
+WHY did you use it?
+
+
+## Google Calendar API
+![Google Calendar](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Calendar&color=4285F4&logo=Google+Calendar&logoColor=FFFFFF&label=)
+![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
+
+WHY did you use it?
+
 
 ---
 
-### Project branches
+### PROJECT BRANCHES
 
 | Branch | Description |
 | ------ | ------ |
