@@ -9,8 +9,14 @@ Jump to
 - [VISIt OUR PAST MVP](#visit-our-past-mvp) 
 - [TECHNOLOGY STACK](#technology-stack) 
   - [Flutter](#flutter) 
-  - [Terminal](#terminal) 
+  - [Firebasel](#firebase) 
+  - [Google Cloud Platform](#google-cloud-platform) 
+  - [Dialogflow](#dialogflow) 
+  - [Google Calendar API](#google-calendar-api) 
 - [PROJECT BRANCHES](#project-branches) 
+- [RUN THIS PROJECT](#run-this-project) 
+- [DESIGN PATTERN](#design-pattern) 
+- [TEAM](#team)
 
 
 ### SOLUTION IN ACTION
@@ -83,7 +89,7 @@ WHY did you use it?
 
 ---
 
-### How to run this project
+### RUN THIS PROJECT
 **Bellow steps are required** to run fully Pilar application.
 
 - Clone project to local machine:
@@ -106,12 +112,12 @@ WHY did you use it?
 
 - More document run project with [Flutter](https://docs.flutter.dev/)
 
-### Design Pattern (Getx)
+### DESIGN PATTERN
 
 [![](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)
 
 
-### Contributors:
+### TEAM:
 <a href="https://github.com/Pilar-App/MVP-Pilar-Project/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Pilar-App/MVP-Pilar-Project" />
 </a>
