@@ -23,7 +23,7 @@ Jump to
 - [TEAM](#team)
 
 
-### SOLUTION IN ACTION
+## SOLUTION IN ACTION
 We submit our solution for the GDSC Solution challenge 2023 based on the 17 Sustainable Development Goals of the United Nations. You can learn more about the goal [here](https://developers.google.com/community/gdsc-solution-challenge).
 
 Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
@@ -31,41 +31,41 @@ Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 <a href="https://youtu.be/gnznBZsCex4" target="_blank"><img src="https://img.youtube.com/vi/gnznBZsCex4/0.jpg" 
 alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
-# Visit our past MVP
+### Visit our past MVP
 
 [MVP-Pilar-Project/action-mvp](https://github.com/Pilar-App/MVP-Pilar-Project/tree/master/action-mvp)
 
 
 ---
 
-### TECHNOLOGY STACK
+## TECHNOLOGY STACK
 
-## Flutter
+### Flutter
 [![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)](https://flutter.dev/)
 ![Dart](https://img.shields.io/static/v1?style=for-the-badge&message=Dart&color=0175C2&logo=Dart&logoColor=FFFFFF&label=)
 
 WHY did you use it?
 
-## Firebase
+### Firebase
 ![Firebase](https://img.shields.io/badge/-Firebase-red?style=for-the-badge&logo=Firebase)
 
 WHY did you use it?
 
 
-## Google Cloud Platform
+### Google Cloud Platform
 ![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)
 
 WHY did you use it?
 
 
-## Dialogflow
+### Dialogflow
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
 WHY did you use it?
 
 
-## Google Calendar API
+### Google Calendar API
 ![Google Calendar](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Calendar&color=4285F4&logo=Google+Calendar&logoColor=FFFFFF&label=)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
@@ -74,7 +74,7 @@ WHY did you use it?
 
 ---
 
-### PROJECT BRANCHES
+## PROJECT BRANCHES
 
 | Branch | Description |
 | ------ | ------ |
@@ -93,7 +93,7 @@ WHY did you use it?
 
 ---
 
-### RUN THIS PROJECT
+## RUN THIS PROJECT
 **Bellow steps are required** to run fully Pilar application.
 
 - Clone project to local machine:
@@ -116,12 +116,12 @@ WHY did you use it?
 
 - More document run project with [Flutter](https://docs.flutter.dev/)
 
-### DESIGN PATTERN
+## DESIGN PATTERN
 
 [![](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)
 
 
-### TEAM:
+## TEAM:
 
 We are a Peruvian team, made up of students from multidisciplinary careers such as Systems Engineering, Business Engineering and Electronic Engineering. We are a diverse team passionate about innovation!
 
