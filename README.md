@@ -1,4 +1,7 @@
-[![Logo-2-Pilar.png](https://i.postimg.cc/jj2tJdJP/Logo-2-Pilar.png)](https://postimg.cc/qNP9Prwv)
+<p align="center">
+  <img src="https://i.postimg.cc/jj2tJdJP/Logo-2-Pilar.png" alt="Pilar - GDSC Solution Challenge 2023"/>
+</p>
+
 # Pilar App
 ![](https://img.shields.io/badge/Flutter-3.7.7-blue) ![](https://img.shields.io/badge/firebase__core-%5E2.8.0-yellow) ![](https://img.shields.io/badge/firebase__auth-%5E4.3.0-yellow) ![](https://img.shields.io/badge/firebase__storage-%5E11.0.16-yellow) ![](https://img.shields.io/badge/cloud__firestore-%5E4.5.0-yellow) ![](https://img.shields.io/badge/get-%5E4.6.5-red)
 
