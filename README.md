@@ -49,6 +49,14 @@ WHY did you use it?
 
 WHY did you use it?
 
+Firestore:
+
+Firebase Auth:
+
+Firebase Cloud Functions:
+
+Firebase Storage:
+
 
 ![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)
 
@@ -60,12 +68,16 @@ WHY did you use it?
 
 WHY did you use it?
 
+intents, fullfilment,...
+
+
 
 ![Google Calendar](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Calendar&color=4285F4&logo=Google+Calendar&logoColor=FFFFFF&label=)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
 WHY did you use it?
 
+Google Calendar API
 
 ---
 
