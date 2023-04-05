@@ -12,11 +12,11 @@ Jump to
 - [SOLUTION IN ACTION](#solution-in-action) 
   - [Visit our past MVP](#visit-our-past-mvp) 
 - [TECHNOLOGY STACK](#technology-stack) 
-  - [Flutter](#flutter) 
-  - [Firebasel](#firebase) 
-  - [Google Cloud Platform](#google-cloud-platform) 
-  - [Dialogflow](#dialogflow) 
-  - [Google Calendar API](#google-calendar-api) 
+  - Flutter
+  - Firebase
+  - Google Cloud Platform
+  - Dialogflow
+  - Google Calendar API
 - [PROJECT BRANCHES](#project-branches) 
 - [RUN THIS PROJECT](#run-this-project) 
 - [DESIGN PATTERN](#design-pattern) 
