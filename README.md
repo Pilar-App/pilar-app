@@ -6,7 +6,7 @@
 Jump to
 
 - [SOLUTION IN ACTION](#solution-in-action) 
-- [VISIt OUR PAST MVP](#visit-our-past-mvp) 
+  - [Visit our past MVP](#visit-our-past-mvp) 
 - [TECHNOLOGY STACK](#technology-stack) 
   - [Flutter](#flutter) 
   - [Firebasel](#firebase) 
@@ -24,13 +24,13 @@ We submit our solution for the GDSC Solution challenge 2023 based on the 17 Sust
 
 Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
-[![Logo-2-Pilar.png](https://i.postimg.cc/jj2tJdJP/Logo-2-Pilar.png)](https://postimg.cc/qNP9Prwv)
+<a href="https://youtu.be/gnznBZsCex4" target="_blank"><img src="https://img.youtube.com/vi/gnznBZsCex4/0.jpg" 
+alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
----
-
-### VISIt OUR PAST MVP
+# Visit our past MVP
 
 [MVP-Pilar-Project/action-mvp](https://github.com/Pilar-App/MVP-Pilar-Project/tree/master/action-mvp)
+
 
 ---
 
