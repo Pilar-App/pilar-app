@@ -60,7 +60,7 @@ Firebase Storage:
 
 [![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)](https://cloud.google.com/)
 
-WHY did you use it?
+Google Cloud offers a wide range of tools and services that we can use to enhance Pilar's functionality, including the integration with Google Calendar API. We also leverage Google Cloud's machine learning capabilities to improve Pilar's natural language processing and ability to understand user intent. Using Google Cloud allows us to easily scale and expand our infrastructure as needed to meet the growing demand for Pilar's services.
 
 
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
