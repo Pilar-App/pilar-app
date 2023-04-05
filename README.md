@@ -42,6 +42,8 @@ alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
 ## TECHNOLOGY STACK
 
+[![Marko.jpg](https://i.postimg.cc/Z5QjL2Tv/Marko.jpg)](https://postimg.cc/NK11sN2Q)
+
 [![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)](https://flutter.dev/) [![Dart](https://img.shields.io/static/v1?style=for-the-badge&message=Dart&color=0175C2&logo=Dart&logoColor=FFFFFF&label=)](https://dart.dev/)
 
 We use it because it is a powerful and efficient tool for cross-platform mobile app development with attractive design, optimal performance, and support from an active community in Peru. Also, 2 team members had some experience with C++ and Java so Dart was quite familiar to us.
