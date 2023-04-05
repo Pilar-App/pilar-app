@@ -140,6 +140,8 @@ The design pattern we use is the most common when using Getx as a state handler.
 We are a Peruvian team, made up of students from multidisciplinary careers such as Systems Engineering, Business Engineering and Electronic Engineering. We are a diverse team passionate about innovation!
 
 Our team has a wide range of skills and knowledge, which complement each other perfectly to tackle challenges and projects like Pilar. We decided to start this project because energy management is a problem that also happens to us and by surveying our university we realized that we are not the only ones. We believe in the impact that developing an application of this style will have since we have a clear why.
+The image was taken from EdrawMind whose author is Gustavo Quino Crispin, Flutter developer.
+
 
 [![Ednaly.jpg](https://i.postimg.cc/Zq02b6qp/Ednaly.jpg)](https://postimg.cc/zLZ0pbKG)
 
