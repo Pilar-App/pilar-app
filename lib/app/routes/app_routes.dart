@@ -5,4 +5,5 @@ abstract class AppRoutes {
   static const quizzHome = "/quizzHome";
   static const quizzPage = "/quizzPage";
   static const lessEnergy = "/lessEnergy";
+  static const boostYourWellness = "/boostYourWellness";
 }
