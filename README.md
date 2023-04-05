@@ -31,6 +31,8 @@ Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 <a href="https://youtu.be/gnznBZsCex4" target="_blank"><img src="https://img.youtube.com/vi/gnznBZsCex4/0.jpg" 
 alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
+[![Pilar-PITCH.jpg](https://i.postimg.cc/MKdQ7BWn/Pilar-PITCH.jpg)](https://postimg.cc/PPvJhPvH)
+
 ### Visit our past MVP
 
 [MVP-Pilar-Project/action-mvp](https://github.com/Pilar-App/MVP-Pilar-Project/tree/master/action-mvp)
