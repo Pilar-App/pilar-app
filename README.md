@@ -65,7 +65,6 @@ WHY did you use it?
 
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
-<iframe height="430" width="350" src="https://bot.dialogflow.com/268c02db-0dc8-4fa0-90af-6e56b5733810"></iframe>
 
 We use Dialogflow because it's a leading AI platform for developing chatbots and virtual assistants. It provides advanced natural language processing tools and resources that enable Pilar to better understand queries and respond more accurately and efficiently to users. Additionally, Dialogflow offers an easy-to-use development interface and seamless integration with other platforms and services.
 
