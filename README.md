@@ -139,6 +139,8 @@ We are a Peruvian team, made up of students from multidisciplinary careers such 
 
 Our team has a wide range of skills and knowledge, which complement each other perfectly to tackle challenges and projects like Pilar. We decided to start this project because energy management is a problem that also happens to us and by surveying our university we realized that we are not the only ones. We believe in the impact that developing an application of this style will have since we have a clear why.
 
+[![Ednaly.jpg](https://i.postimg.cc/Zq02b6qp/Ednaly.jpg)](https://postimg.cc/zLZ0pbKG)
+
 <a href="https://github.com/Pilar-App/MVP-Pilar-Project/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Pilar-App/MVP-Pilar-Project" />
 </a>
