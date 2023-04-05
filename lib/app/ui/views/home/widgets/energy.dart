@@ -1,11 +1,105 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:pilar_app/app/routes/app_routes.dart';
+import 'package:pilar_app/app/ui/components/dialog_add_task.dart';
+import 'package:pilar_app/app/ui/views/bottom_navbar/navigation_controller.dart';
+import 'package:pilar_app/app/ui/views/home/widgets/energy_linear_gauge.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-class Energy extends StatelessWidget {
-  const Energy({Key? key}) : super(key: key);
+class Energy extends GetView<NavigationController> {
+  const Energy({
+    Key? key,
+    required this.uid,
+  }) : super(key: key);
+
+  final String uid;
+
+  Stream<double> getTotalTasksEnergy() => FirebaseFirestore.instance
+      .collection("tasks")
+      .where("uid", isEqualTo: uid)
+      .where(
+        "startTime",
+        isGreaterThanOrEqualTo: Timestamp.fromDate(
+          DateTime(
+            DateTime.now().year,
+            DateTime.now().month,
+            DateTime.now().day,
+            0,
+            0,
+            0,
+          ),
+        ),
+      )
+      .snapshots()
+      .map((snapshot) =>
+          snapshot.docs.map((doc) => Task.fromJson(doc.data())).toList())
+      .map(
+        (docs) => docs
+            .where(
+              (doc) =>
+                  doc.endTime.millisecondsSinceEpoch <
+                  Timestamp.fromDate(
+                    DateTime(
+                      DateTime.now().year,
+                      DateTime.now().month,
+                      DateTime.now().day,
+                      24,
+                      0,
+                      0,
+                    ),
+                  ).millisecondsSinceEpoch,
+            )
+            .toList(),
+      )
+      .map((tasks) => tasks.map((task) => task.totalEnergy))
+      .map((totalEnergies) =>
+          totalEnergies.reduce((value, element) => value + element));
+
+  Stream<double> getCompletedTasksEnergy() => FirebaseFirestore.instance
+      .collection("tasks")
+      .where("uid", isEqualTo: uid)
+      .where(
+        "startTime",
+        isGreaterThanOrEqualTo: Timestamp.fromDate(
+          DateTime(
+            DateTime.now().year,
+            DateTime.now().month,
+            DateTime.now().day,
+            0,
+            0,
+            0,
+          ),
+        ),
+      )
+      .snapshots()
+      .map((snapshot) =>
+          snapshot.docs.map((doc) => Task.fromJson(doc.data())).toList())
+      .map(
+        (docs) => docs.where((doc) => doc.isCompleted == true).toList(),
+      )
+      .map(
+        (docs) => docs
+            .where(
+              (doc) =>
+                  doc.endTime.millisecondsSinceEpoch <
+                  Timestamp.fromDate(
+                    DateTime(
+                      DateTime.now().year,
+                      DateTime.now().month,
+                      DateTime.now().day,
+                      24,
+                      0,
+                      0,
+                    ),
+                  ).millisecondsSinceEpoch,
+            )
+            .toList(),
+      )
+      .map((tasks) => tasks.map((task) => task.totalEnergy))
+      .map((totalEnergies) =>
+          totalEnergies.reduce((value, element) => value + element));
 
   @override
   Widget build(BuildContext context) {
@@ -47,74 +141,114 @@ class Energy extends StatelessWidget {
             child: Row(
               children: [
                 SizedBox(
-                  width: 150.0,
-                  height: 150.0,
+                  width: 160.0,
+                  height: 160.0,
                   child: LayoutBuilder(
                     builder:
                         (BuildContext context, BoxConstraints constraints) {
-                      return SfRadialGauge(
-                        axes: <RadialAxis>[
-                          RadialAxis(
-                            showLabels: false,
-                            showTicks: false,
-                            startAngle: 270,
-                            endAngle: 270,
-                            radiusFactor: 0.8,
-                            axisLineStyle: const AxisLineStyle(
-                              thicknessUnit: GaugeSizeUnit.factor,
-                              thickness: 0.15,
-                            ),
-                            annotations: <GaugeAnnotation>[
-                              GaugeAnnotation(
-                                axisValue: 40,
-                                positionFactor: 0.1,
-                                widget: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: const <Widget>[
-                                        Text(
-                                          '21.0',
-                                          style: TextStyle(
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
+                      return StreamBuilder<double>(
+                        stream: getTotalTasksEnergy(),
+                        builder: (context, snapshot) {
+                          return StreamBuilder(
+                              stream: getCompletedTasksEnergy(),
+                              builder: (context, snapshot2) {
+                                switch (snapshot.connectionState) {
+                                  case ConnectionState.none:
+                                    return const Center(
+                                      child: CircularProgressIndicator(),
+                                    );
+                                  case ConnectionState.waiting:
+                                    return const Center(
+                                      child: CircularProgressIndicator(),
+                                    );
+                                  case ConnectionState.active:
+                                    final value =
+                                        snapshot.hasData ? snapshot.data! : 0.0;
+                                    final value2 = snapshot2.hasData
+                                        ? snapshot2.data!
+                                        : 0.0;
+                                    return SfRadialGauge(
+                                      axes: <RadialAxis>[
+                                        RadialAxis(
+                                          showLabels: false,
+                                          showTicks: false,
+                                          startAngle: 270,
+                                          endAngle: 270,
+                                          radiusFactor: 0.8,
+                                          isInversed: true,
+                                          axisLineStyle: const AxisLineStyle(
+                                            thicknessUnit: GaugeSizeUnit.factor,
+                                            thickness: 0.15,
                                           ),
-                                        ),
-                                        Text(
-                                          ' / 63.5',
-                                          style: TextStyle(
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
+                                          annotations: <GaugeAnnotation>[
+                                            GaugeAnnotation(
+                                              axisValue: 40,
+                                              positionFactor: 0.1,
+                                              widget: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: <Widget>[
+                                                      Text(
+                                                        '$value2',
+                                                        style: const TextStyle(
+                                                          fontSize: 15.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        ' / $value',
+                                                        style: const TextStyle(
+                                                          fontSize: 15.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  const Text(
+                                                    "points",
+                                                    style: TextStyle(
+                                                      fontSize: 15.0,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                          pointers: <GaugePointer>[
+                                            RangePointer(
+                                              value: snapshot.hasData
+                                                  ? value2 / value * 100
+                                                  : 0.0,
+                                              cornerStyle: value == value2
+                                                  ? CornerStyle.bothFlat
+                                                  : CornerStyle.bothCurve,
+                                              enableAnimation: true,
+                                              animationDuration: 1200,
+                                              sizeUnit: GaugeSizeUnit.factor,
+                                              color: const Color.fromRGBO(
+                                                  37, 138, 216, 1.0),
+                                              // color: Colors.red,
+                                              width: 0.15,
+                                            ),
+                                          ],
                                         ),
                                       ],
-                                    ),
-                                    const Text(
-                                      "points",
-                                      style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                            pointers: const <GaugePointer>[
-                              RangePointer(
-                                value: 21 / 63.5 * 100,
-                                cornerStyle: CornerStyle.bothFlat,
-                                enableAnimation: true,
-                                animationDuration: 1200,
-                                sizeUnit: GaugeSizeUnit.factor,
-                                color: Color.fromRGBO(37, 138, 216, 1.0),
-                                // color: Colors.red,
-                                width: 0.15,
-                              ),
-                            ],
-                          ),
-                        ],
+                                    );
+                                  case ConnectionState.done:
+                                    return const Center(
+                                      child: CircularProgressIndicator(),
+                                    );
+                                }
+                              });
+                        },
                       );
                     },
                   ),
@@ -127,72 +261,24 @@ class Energy extends StatelessWidget {
                           (BuildContext context, BoxConstraints constraints) {
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              "Morning",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w500,
-                              ),
+                          children: const [
+                            EnergyLinearGauge(
+                              title: "Morning",
+                              type: 1,
                             ),
-                            const SizedBox(
-                              height: 2.0,
-                            ),
-                            SfLinearGauge(
-                              showLabels: false,
-                              showTicks: false,
-                              barPointers: const [
-                                LinearBarPointer(
-                                  value: 65,
-                                  color: Color.fromRGBO(37, 138, 216, 1.0),
-                                )
-                              ],
-                            ),
-                            const SizedBox(
+                            SizedBox(
                               height: 10.0,
                             ),
-                            const Text(
-                              "Afternoon",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w500,
-                              ),
+                            EnergyLinearGauge(
+                              title: "Afternoon",
+                              type: 2,
                             ),
-                            const SizedBox(
-                              height: 2.0,
-                            ),
-                            SfLinearGauge(
-                              showLabels: false,
-                              showTicks: false,
-                              barPointers: const [
-                                LinearBarPointer(
-                                  value: 85,
-                                  color: Color.fromRGBO(37, 138, 216, 1.0),
-                                )
-                              ],
-                            ),
-                            const SizedBox(
+                            SizedBox(
                               height: 10.0,
                             ),
-                            const Text(
-                              "Evenning",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 2.0,
-                            ),
-                            SfLinearGauge(
-                              showLabels: false,
-                              showTicks: false,
-                              barPointers: const [
-                                LinearBarPointer(
-                                  value: 15,
-                                  color: Color.fromRGBO(37, 138, 216, 1.0),
-                                )
-                              ],
+                            EnergyLinearGauge(
+                              title: "Evenning",
+                              type: 3,
                             ),
                           ],
                         );
@@ -214,7 +300,9 @@ class Energy extends StatelessWidget {
                 Column(
                   children: [
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.lessEnergy);
+                      },
                       color: const Color.fromRGBO(73, 92, 104, 1.0),
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(16),
@@ -248,7 +336,7 @@ class Energy extends StatelessWidget {
                   children: [
                     MaterialButton(
                       onPressed: () {
-                        Get.toNamed(AppRoutes.yourTasks);
+                        DialogAddTask.showTitleDialog(user: controller.user);
                       },
                       color: const Color.fromRGBO(37, 138, 216, 1.0),
                       textColor: Colors.white,
@@ -264,14 +352,14 @@ class Energy extends StatelessWidget {
                       height: 10.0,
                     ),
                     const Text(
-                      "Your",
+                      "Add",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     const Text(
-                      "Tasks",
+                      "To-dos",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
@@ -297,14 +385,14 @@ class Energy extends StatelessWidget {
                       height: 10.0,
                     ),
                     const Text(
-                      "More",
+                      "Improve your",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     const Text(
-                      "energy",
+                      "welfare",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
