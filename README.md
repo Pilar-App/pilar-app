@@ -134,13 +134,13 @@ Moreover, we integrate Pilar with Google Calendar API, which allows users to sch
 [![](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)
 
 The design pattern we use is the most common when using Getx as a state handler. This pattern is ideal for our project because we use many widgets and views that control states in common.
+The image was taken from EdrawMind whose author is Gustavo Quino Crispin, Flutter developer.
 
 ## TEAM:
 
 We are a Peruvian team, made up of students from multidisciplinary careers such as Systems Engineering, Business Engineering and Electronic Engineering. We are a diverse team passionate about innovation!
 
 Our team has a wide range of skills and knowledge, which complement each other perfectly to tackle challenges and projects like Pilar. We decided to start this project because energy management is a problem that also happens to us and by surveying our university we realized that we are not the only ones. We believe in the impact that developing an application of this style will have since we have a clear why.
-The image was taken from EdrawMind whose author is Gustavo Quino Crispin, Flutter developer.
 
 
 [![Ednaly.jpg](https://i.postimg.cc/Zq02b6qp/Ednaly.jpg)](https://postimg.cc/zLZ0pbKG)
