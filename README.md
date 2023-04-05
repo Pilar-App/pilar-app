@@ -49,16 +49,16 @@ We use it because it is a powerful and efficient tool for cross-platform mobile 
 
 Firebase provides us with a large number of SDKs for different mobile platforms, such as Android, iOS and Flutter. Its integration was quite fast and important as it gave us access to services such as authentication, real-time databases and push notifications in a simple and efficient way.
 
-**Firestore Database:**
+**`Firestore Database:`**
 We use it to store the information of all motivation letters, well-being advice, chronotype questions and references to our users' tasks. (Now we are working on the security of our users' data) 
 
-**Firebase Auth:**
+**`Firebase Auth:`**
 We use it to make it easy for our users to log in using their personal Google accounts as a quick alternative.
 
-**Firebase Cloud Functions:**
+**`Firebase Cloud Functions:`**
 We use it to generate a webhook for Dialogflow in order to manipulate information from Pilar more comfortably and thus add more custom functionality to it.
 
-**Firebase Storage:**
+**`Firebase Storage:`**
 We use it to store our images and icons in an organized way without consuming many resources locally
 
 [![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)](https://cloud.google.com/)
