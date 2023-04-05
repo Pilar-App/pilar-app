@@ -127,6 +127,7 @@ Moreover, we integrate Pilar with Google Calendar API, which allows users to sch
 
 [![](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)](https://res.cloudinary.com/joseniquen/image/upload/v1680322853/pilar/Captura_de_pantalla_2023-03-31_231942_lywcqr.png)
 
+The design pattern we use is the most common when using Getx as a state handler. This pattern is ideal for our project because we use many widgets and views that control states in common.
 
 ## TEAM:
 
