@@ -64,7 +64,8 @@ We use it to store our images and icons in an organized way without consuming ma
 [![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)](https://cloud.google.com/)
 
 Google Cloud offers a wide range of tools and services that we can use to enhance Pilar's functionality, including the integration with Google Calendar API. We also leverage Google Cloud's machine learning capabilities to improve Pilar's natural language processing and ability to understand user intent. Using Google Cloud allows us to easily scale and expand our infrastructure as needed to meet the growing demand for Pilar's services.
-[[![imagen.png](https://i.postimg.cc/rptQcWjr/imagen.png)](https://postimg.cc/WDTMwdQN)](https://bot.dialogflow.com/268c02db-0dc8-4fa0-90af-6e56b5733810)
+
+[[![imagen.png](https://i.postimg.cc/rptQcWjr/imagen.png)](https://bot.dialogflow.com/268c02db-0dc8-4fa0-90af-6e56b5733810)
 
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
