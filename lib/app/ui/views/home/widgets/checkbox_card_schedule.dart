@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:pilar_app/app/ui/components/dialog_add_task.dart';
 import 'package:pilar_app/app/ui/components/dialog_loading.dart';
+import 'package:pilar_app/app/ui/components/dialog_success.dart';
 
 class CheckboxCardSchedule extends StatefulWidget {
   const CheckboxCardSchedule({
@@ -62,6 +63,7 @@ class _CheckboxCardScheduleState extends State<CheckboxCardSchedule> {
           _isChecked = newValue!;
         });
         changeStatusTask(value: newValue!);
+        DialogSuccess.showDialog();
       },
     );
   }

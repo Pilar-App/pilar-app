@@ -281,8 +281,6 @@ class CardSchedule extends GetView<NavigationController> {
                           }
                         },
                       ),
-                      const Divider(),
-                      const Text("Reuniones de Calendar")
                     ],
                   ),
                 ),

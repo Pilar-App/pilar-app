@@ -317,14 +317,14 @@ class Energy extends GetView<NavigationController> {
                       height: 10.0,
                     ),
                     const Text(
-                      "Less",
+                      "Energy",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     const Text(
-                      "energy",
+                      "drains",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
@@ -370,14 +370,16 @@ class Energy extends GetView<NavigationController> {
                 Column(
                   children: [
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.boostYourWellness);
+                      },
                       color: const Color.fromRGBO(73, 92, 104, 1.0),
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(16),
                       shape: const CircleBorder(),
                       elevation: 0,
                       child: const Icon(
-                        Icons.flash_on,
+                        Icons.volunteer_activism,
                         size: 30,
                       ),
                     ),
@@ -385,14 +387,14 @@ class Energy extends GetView<NavigationController> {
                       height: 10.0,
                     ),
                     const Text(
-                      "Improve your",
+                      "Boost your",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     const Text(
-                      "welfare",
+                      "wellness",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,

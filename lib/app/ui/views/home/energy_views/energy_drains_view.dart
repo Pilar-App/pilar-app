@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class LessEnergyView extends StatelessWidget {
-  const LessEnergyView({Key? key}) : super(key: key);
+class EnergyDrainsView extends StatelessWidget {
+  const EnergyDrainsView({Key? key}) : super(key: key);
 
   Stream<List<EnergyThieves>> getEnergyThieves() => FirebaseFirestore.instance
       .collection("energy-thieves")
@@ -28,7 +28,7 @@ class LessEnergyView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Less Energy"),
+        title: const Text("Energy drains"),
         elevation: 0.0,
         backgroundColor: const Color.fromRGBO(37, 138, 216, 1.0),
       ),
@@ -43,16 +43,6 @@ class LessEnergyView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Some to-dos to lose points",
-                  style: TextStyle(
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                const SizedBox(
-                  height: 15.0,
-                ),
                 StreamBuilder<List<EnergyThieves>>(
                     stream: getEnergyThieves(),
                     builder: (context, snapshot) {
@@ -99,6 +89,9 @@ class LessEnergyView extends StatelessWidget {
                                       .map(
                                         (EnergyThieves energyThief) => Column(
                                           children: [
+                                            const SizedBox(
+                                              height: 5.0,
+                                            ),
                                             Card(
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
@@ -110,7 +103,7 @@ class LessEnergyView extends StatelessWidget {
                                                   horizontal: 24.0,
                                                   vertical: 16.0,
                                                 ),
-                                                height: 180.0,
+                                                height: 200.0,
                                                 decoration: BoxDecoration(
                                                   image: DecorationImage(
                                                     image: NetworkImage(
@@ -205,6 +198,9 @@ class LessEnergyView extends StatelessWidget {
                                                   ],
                                                 ),
                                               ),
+                                            ),
+                                            const SizedBox(
+                                              height: 5.0,
                                             ),
                                           ],
                                         ),
