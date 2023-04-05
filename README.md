@@ -40,12 +40,12 @@ alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
 ## TECHNOLOGY STACK
 
-[![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)](https://flutter.dev/) ![Dart](https://img.shields.io/static/v1?style=for-the-badge&message=Dart&color=0175C2&logo=Dart&logoColor=FFFFFF&label=)
+[![Flutter](https://img.shields.io/badge/-Flutter-blue?style=for-the-badge&logo=Flutter)](https://flutter.dev/) [![Dart](https://img.shields.io/static/v1?style=for-the-badge&message=Dart&color=0175C2&logo=Dart&logoColor=FFFFFF&label=)](https://dart.dev/)
 
 WHY did you use it?
 
 
-![Firebase](https://img.shields.io/badge/-Firebase-red?style=for-the-badge&logo=Firebase)
+[![Firebase](https://img.shields.io/badge/-Firebase-red?style=for-the-badge&logo=Firebase)](https://firebase.google.com/)
 
 WHY did you use it?
 
@@ -58,7 +58,7 @@ Firebase Cloud Functions:
 Firebase Storage:
 
 
-![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)
+[![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-black?style=for-the-badge&logo=Google-Cloud)](https://cloud.google.com/)
 
 WHY did you use it?
 
@@ -66,18 +66,15 @@ WHY did you use it?
 ![Dialogflow](https://img.shields.io/badge/-Dialogflow-blueviolet?style=for-the-badge&logo=Dialogflow)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
-WHY did you use it?
+We use Dialogflow because it's a leading AI platform for developing chatbots and virtual assistants. It provides advanced natural language processing tools and resources that enable Pilar to better understand queries and respond more accurately and efficiently to users. Additionally, Dialogflow offers an easy-to-use development interface and seamless integration with other platforms and services.
 
-intents, fullfilment,...
+We also use Fulfillment, a feature in Dialogflow that allows Pilar to perform more complex actions and integrations with other systems, such as retrieving data from a database or making API calls.
 
-
-
-![Google Calendar](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Calendar&color=4285F4&logo=Google+Calendar&logoColor=FFFFFF&label=)
+[![Google Calendar](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Calendar&color=4285F4&logo=Google+Calendar&logoColor=FFFFFF&label=)](https://developers.google.com/calendar/api/guides/)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
+[![imagen.png](https://i.postimg.cc/7LCZmPV9/imagen.png)](https://postimg.cc/Ff4vK4wk)
 
-WHY did you use it?
-
-Google Calendar API
+Moreover, we integrate Pilar with Google Calendar API, which allows users to schedule appointments and reminders directly from the conversation with Pilar. This integration streamlines the process of managing schedules and tasks for users and enhances the overall user experience.
 
 ---
 
