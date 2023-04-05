@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Overwork",
+    "description": "Spending long hours at work without taking enough breaks or vacations can be physically and mentally exhausting, robbing you of energy.",
+    "image": "https://marketing-assets.wheniwork-production.com/2022/02/10105410/Post-Header_2x-16-1.png",
+    "source": "https://wheniwork.com/blog/overworked-employees"
+  },
+  {
+    "title": "Lack of exercise",
+    "description": "Eating unhealthy foods, high in refined sugars, saturated fats, and processed foods, can negatively affect your energy levels and leave you feeling tired and lifeless.",
+    "image": "https://brigadoonfitness.com/wp-content/uploads/2022/06/Lack-of-Exercise.png",
+    "source": "https://www.labmanager.com/news/one-in-five-deaths-associated-with-poor-diet-globally-2180"
+  },
+  {
+    "title": "Poor diet",
+    "description": "Perhaps dulled by the effects of digital life, people seek out people 'out of their league'.",
+    "image": "https://cdn.labmanager.com/assets/articleNo/2180/iImg/4672/5bc5032e-af2c-468b-9194-dd3015d1f9c2-apr4-diet.jpg",
+    "source": "https://www.google.co.uk/search?q=personas&sxsrf=APwXEdfYF-ML5HChb91u_INvyw9ie2jYHA:1680645924973&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiFquf6nZH-AhXeGLkGHekpD_gQ_AUoAXoECAEQAw&biw=1091&bih=987&dpr=1.88#imgrc=FO8NrB9TwrjFqM"
+  },
+  {
+    "title": "Lack of sleep",
+    "description": "Not getting enough sleep or having poor quality sleep can exhaust you physically and mentally, reduce your energy, and affect your overall well-being.",
+    "image": "https://www.topdowndental.com/x/lc-content/uploads/2020/09/Sleep-disorders-and-depression.jpg",
+    "source": "https://www.topdowndental.com/blog/lack-of-sleep-giving-you-depression/"
+  },
+  {
+    "title": "Too much screen time",
+    "description": "Too much time in front of screens on electronic devices like computers, phones, or televisions can cause eyestrain, affect sleep quality, and drain your energy.",
+    "image": "https://www.verywellfamily.com/thmb/_pbfznx6A8JzKVYjQ9dgwEH599o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/459721649-56a258235f9b58b7d0c93177.jpg",
+    "source": "https://www.verywellfamily.com/the-negative-effects-of-too-much-screen-time-1094877"
+  },
+  {
+    "title": "Disorganization and Clutter",
+    "description": "Living in a disorganized and cluttered environment can lead to stress and mental exhaustion, which can negatively affect your energy levels.",
+    "image": "https://i0.wp.com/farm3.staticflickr.com/2283/2118793276_a608521950.jpg",
+    "source": "https://bravolifecoaching.com/2012/10/19/strategies-for-dealing-with-clutter-and-disorganization/"
+  },
+  {
+    "title": "Responsibilities Overload",
+    "description": "Being overburdened with responsibilities, both at work and in personal life, can leave you feeling overwhelmed and drained of energy, sapping your ability to cope with daily demands.",
+    "image": "https://thehubbackend.com/media/93746-2-role-overload-credit-shutterstock.jpg",
+    "source": "https://www.thehumancapitalhub.com/articles/Role-Overload-And-What-You-Need-To-Know-About-It-"
+  },
+  {
+    "title": "Las personas intentan salir con personas 25% más atractivas que ellas (ESTUDIO)",
+    "description": "Acaso embotadas por los efectos de la vida digital, las personas buscan a personas 'fuera de su liga'.",
+    "image": "https://images.ecestaticos.com/XpHlnlxZu162wj1Gpt87N8xcW8o=/0x16:987x534/600x315/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F62c%2Fe5d%2F314%2F62ce5d3141c0b670144a692b7f6a21fa.jpg",
+    "source": "https://www.google.co.uk/search?q=personas&sxsrf=APwXEdfYF-ML5HChb91u_INvyw9ie2jYHA:1680645924973&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiFquf6nZH-AhXeGLkGHekpD_gQ_AUoAXoECAEQAw&biw=1091&bih=987&dpr=1.88#imgrc=FO8NrB9TwrjFqM"
+  },
+  {
+    "title": "Lack of Personal Boundaries",
+    "description": "Failing to set proper boundaries in your personal relationships can lead you to feel emotionally and mentally drained as you can constantly give in to the needs and demands of others.",
+    "image": "https://pivotincorporated.com/wp-content/uploads/2021/04/pivot_may2021_blogfeat.jpg",
+    "source": "https://pivotincorporated.com/success-mindset-series-how-to-set-healthy-boundaries/"
+  },
+  {
+    "title": "Lack of time for yourself",
+    "description": "Not dedicating enough time to yourself and the activities you enjoy can drain you emotionally and mentally, since you are not taking care of your own needs and well-being.",
+    "image": "https://media.npr.org/assets/img/2021/05/04/gettyimages-1257996355_wide-350f2de5f7c45a45bb8154ff0335720bdca052eb.jpg",
+    "source": "https://www.npr.org/sections/health-shots/2021/05/06/992401123/if-your-brain-feels-foggy-and-youre-tired-all-the-time-youre-not-alone"
+  },
+  {
+    "title": "Excessive Worrying and Rumination",
+    "description": "Spending a lot of time worrying about the past or future, ruminating over problems, or stressing about things you can't control can drain your mental and emotional energy.",
+    "image": "https://psycheducation.org/wp-content/uploads/2020/10/Overthinking.jpg",
+    "source": "https://psycheducation.org/blog/overthinking-worry-and-rumination/"
+  }
+]

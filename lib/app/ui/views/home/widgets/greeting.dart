@@ -5,11 +5,9 @@ class Greeting extends StatelessWidget {
   const Greeting({
     Key? key,
     required this.name,
-    required this.chronotype,
   }) : super(key: key);
 
   final String name;
-  final String chronotype;
 
   @override
   Widget build(BuildContext context) {

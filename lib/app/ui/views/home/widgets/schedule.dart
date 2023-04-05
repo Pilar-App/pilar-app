@@ -28,18 +28,21 @@ class Schedule extends StatelessWidget {
                 CardSchedule(
                   title: "Good morning",
                   hour: "8:00 a.m",
+                  type: 1,
                   image: "assets/images/bg_3.jpg",
                   positionImage: Alignment.topCenter,
                 ),
                 CardSchedule(
                   title: "Good Afternoon",
                   hour: "2:30 p.m",
+                  type: 2,
                   image: "assets/images/bg_2.jpg",
                   positionImage: Alignment.bottomCenter,
                 ),
                 CardSchedule(
                   title: "Good evenning",
                   hour: "7:00 p.m",
+                  type: 3,
                   image: "assets/images/bg_4.jpg",
                   positionImage: Alignment.bottomCenter,
                 ),
