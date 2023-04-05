@@ -33,6 +33,8 @@ alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
 [![Pilar-PITCH.jpg](https://i.postimg.cc/MKdQ7BWn/Pilar-PITCH.jpg)](https://postimg.cc/PPvJhPvH)
 
+[![Pilar-PITCH-1.jpg](https://i.postimg.cc/T1CY8rwF/Pilar-PITCH-1.jpg)](https://postimg.cc/T55Xg5nJ)
+
 ### Visit our past MVP
 
 [MVP-Pilar-Project/action-mvp](https://github.com/Pilar-App/MVP-Pilar-Project/tree/master/action-mvp)
