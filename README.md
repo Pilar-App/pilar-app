@@ -28,7 +28,7 @@ We submit our solution for the GDSC Solution challenge 2023 based on the 17 Sust
 
 Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
-<a href="https://youtu.be/gnznBZsCex4" target="_blank"><img src="https://img.youtube.com/vi/gnznBZsCex4/0.jpg" 
+<a href="https://youtu.be/jNXL-Y8QysE" target="_blank"><img src="https://img.youtube.com/vi/jNXL-Y8QysE/0.jpg" 
 alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
 [![Pilar-PITCH.jpg](https://i.postimg.cc/MKdQ7BWn/Pilar-PITCH.jpg)](https://postimg.cc/PPvJhPvH)
