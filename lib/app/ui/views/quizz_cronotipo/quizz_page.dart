@@ -8,7 +8,7 @@ import 'package:pilar_app/app/routes/app_routes.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/question.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/classes/quiz.dart';
 import 'package:pilar_app/app/ui/views/quizz_cronotipo/quizz_controller.dart';
-import 'package:pilar_app/app/ui/views/quizz_cronotipo/widgets/getImage.dart';
+import 'package:pilar_app/app/ui/views/quizz_cronotipo/widgets/get_image.dart';
 
 class QuizzPage extends StatefulWidget {
   const QuizzPage({Key? key}) : super(key: key);
@@ -142,7 +142,6 @@ class _QuizzPageState extends State<QuizzPage> {
         actions: [
           TextButton(
             onPressed: () {
-              // todo: pasar el cronotipo resultado
               saveChronotype(
                 chronotypePar: chronotypeAnimal,
                 uid: context.user.uid,

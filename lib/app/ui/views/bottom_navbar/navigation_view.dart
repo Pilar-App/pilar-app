@@ -12,7 +12,7 @@ class NavigationView extends GetView<NavigationController> {
   final screens = [
     const HomeView(),
     const ChatView(),
-    ProfileView(),
+    const ProfileView(),
   ];
 
   // final User? user = Auth()
