@@ -2,6 +2,16 @@
   <img src="https://i.postimg.cc/jj2tJdJP/Logo-2-Pilar.png" alt="Pilar - GDSC Solution Challenge 2023"/>
 </p>
 
+---
+# DEAR JUDGE, WE HAD A PROBLEM UPLOADING THE YOUTUBE VIDEO LINK TO THE FORM, YOU CAN FIND THE CORRECT LINK YOUTUBE VIDEO BELOW:
+
+Link Youtube Official Video: https://youtu.be/jNXL-Y8QysE
+
+<a href="https://youtu.be/jNXL-Y8QysE" target="_blank"><img src="https://img.youtube.com/vi/jNXL-Y8QysE/0.jpg" 
+alt="Pilar - GDSC Solution Challenge 2023"/></a>
+
+---
+
 # Pilar App
 ![](https://img.shields.io/badge/Flutter-3.7.7-blue) ![](https://img.shields.io/badge/firebase__core-%5E2.8.0-yellow) ![](https://img.shields.io/badge/firebase__auth-%5E4.3.0-yellow) ![](https://img.shields.io/badge/firebase__storage-%5E11.0.16-yellow) ![](https://img.shields.io/badge/cloud__firestore-%5E4.5.0-yellow) ![](https://img.shields.io/badge/get-%5E4.6.5-red)
 
@@ -28,8 +38,6 @@ We submit our solution for the GDSC Solution challenge 2023 based on the 17 Sust
 
 Our explanation on [YouTube](https://www.youtube.com/@pilarproductividad).
 
-<a href="https://youtu.be/jNXL-Y8QysE" target="_blank"><img src="https://img.youtube.com/vi/jNXL-Y8QysE/0.jpg" 
-alt="Pilar - GDSC Solution Challenge 2023"/></a>
 
 [![Pilar-PITCH.jpg](https://i.postimg.cc/MKdQ7BWn/Pilar-PITCH.jpg)](https://postimg.cc/PPvJhPvH)
 
